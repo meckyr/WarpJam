@@ -12,6 +12,7 @@ using Microsoft.Xna.Framework.Media;
 using Microsoft.Phone.Shell;
 using WarpJam.Tools;
 
+//coba ngepush
 namespace WarpJam
 {
     /// <summary>
