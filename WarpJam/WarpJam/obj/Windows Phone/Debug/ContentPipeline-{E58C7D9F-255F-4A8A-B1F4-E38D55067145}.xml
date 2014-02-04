@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>menu\background.png</Source>
+      <Name>menu\background</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\menu\background.xnb</Output>
+      <Time>2014-02-04T17:17:52.2152198+07:00</Time>
+    </Item>
+    <Item>
+      <Source>menu\playbutton.png</Source>
+      <Name>menu\playbutton</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\menu\playbutton.xnb</Output>
+      <Time>2014-02-04T17:23:14.6047331+07:00</Time>
+    </Item>
+    <Item>
+      <Source>menu\hero.png</Source>
+      <Name>menu\hero</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\menu\hero.xnb</Output>
+      <Time>2014-02-04T17:34:20.0666111+07:00</Time>
+    </Item>
+    <Item>
+      <Source>font\font.spritefont</Source>
+      <Name>font\font</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\font\font.xnb</Output>
+      <Time>2014-02-04T17:29:43.9571195+07:00</Time>
+    </Item>
+    <Item>
+      <Source>WhitePixel.bmp</Source>
+      <Name>WhitePixel</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\WhitePixel.xnb</Output>
+      <Time>2014-02-04T17:51:33.4266641+07:00</Time>
+    </Item>
+    <Item>
+      <Source>sfx\button.mp3</Source>
+      <Name>sfx\button</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\sfx\button.xnb</Output>
+      <Time>2014-02-04T17:59:31.0740438+07:00</Time>
+    </Item>
+    <Item>
+      <Source>song\mainmusic.mp3</Source>
+      <Name>song\mainmusic</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\song\mainmusic.xnb</Output>
+      <Extra>E:\Project\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\song\mainmusic.wma</Extra>
+      <Time>2014-02-04T18:15:48.7378233+07:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <ContentProjectGUID>{E58C7D9F-255F-4A8A-B1F4-E38D55067145}</ContentProjectGUID>
+      <TargetPlatform>WindowsPhone</TargetPlatform>
+      <TargetProfile>Reach</TargetProfile>
+      <BuildConfiguration>Debug</BuildConfiguration>
+      <CompressContent>false</CompressContent>
+      <RootDirectory>E:\Project\WarpJam\WarpJam\WarpJamContent\</RootDirectory>
+      <LoggerRootDirectory>E:\Project\WarpJam\WarpJam\WarpJam\</LoggerRootDirectory>
+      <IntermediateDirectory>E:\Project\WarpJam\WarpJam\WarpJam\obj\Windows Phone\Debug\</IntermediateDirectory>
+      <OutputDirectory>E:\Project\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2012-09-06T14:52:54+07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2012-09-06T14:52:54+07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2012-09-06T14:52:54+07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2012-09-06T14:52:54+07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2012-09-06T14:52:54+07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2012-09-06T14:52:54+07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2013-04-12T03:49:17.1274678+07:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>

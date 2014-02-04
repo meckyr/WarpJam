@@ -1,0 +1,8 @@
+Content\menu\background.xnb
+Content\menu\playbutton.xnb
+Content\menu\hero.xnb
+Content\font\font.xnb
+Content\WhitePixel.xnb
+Content\sfx\button.xnb
+Content\song\mainmusic.xnb
+Content\song\mainmusic.wma
