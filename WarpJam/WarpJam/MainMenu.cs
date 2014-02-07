@@ -37,10 +37,13 @@ namespace WarpJam
             play.OnClick += () =>
             {
                 SceneManager.push.Play();
+                SceneManager.PlaySong(2);
                 SceneManager.SetActiveScene("MainLevel");
                 SceneManager.ActiveScene.ResetScene();
             };
             AddSceneObject(play);
+
+
         }
 
         public override void LoadContent(ContentManager contentmanager)

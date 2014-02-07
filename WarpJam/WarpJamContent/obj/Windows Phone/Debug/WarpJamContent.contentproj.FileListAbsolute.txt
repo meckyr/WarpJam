@@ -1,1 +1,2 @@
 E:\Project\WarpJam\WarpJam\WarpJamContent\obj\Windows Phone\Debug\WarpJamContent.contentprojResolveAssemblyReference.cache
+E:\Project\Git\WarpJam\WarpJam\WarpJamContent\obj\Windows Phone\Debug\WarpJamContent.contentprojResolveAssemblyReference.cache

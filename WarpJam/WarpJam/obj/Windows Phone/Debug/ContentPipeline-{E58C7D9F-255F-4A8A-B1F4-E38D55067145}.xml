@@ -2,49 +2,14 @@
 <XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
   <Asset Type="Pipeline:BuildItemCollection">
     <Item>
-      <Source>menu\background.png</Source>
-      <Name>menu\background</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
+      <Source>song\levelmusic.mp3</Source>
+      <Name>song\levelmusic</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\Project\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\menu\background.xnb</Output>
-      <Time>2014-02-04T17:17:52.2152198+07:00</Time>
-    </Item>
-    <Item>
-      <Source>menu\playbutton.png</Source>
-      <Name>menu\playbutton</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>E:\Project\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\menu\playbutton.xnb</Output>
-      <Time>2014-02-04T17:23:14.6047331+07:00</Time>
-    </Item>
-    <Item>
-      <Source>menu\hero.png</Source>
-      <Name>menu\hero</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>E:\Project\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\menu\hero.xnb</Output>
-      <Time>2014-02-04T17:34:20.0666111+07:00</Time>
-    </Item>
-    <Item>
-      <Source>font\font.spritefont</Source>
-      <Name>font\font</Name>
-      <Importer>FontDescriptionImporter</Importer>
-      <Processor>FontDescriptionProcessor</Processor>
-      <Options>None</Options>
-      <Output>E:\Project\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\font\font.xnb</Output>
-      <Time>2014-02-04T17:29:43.9571195+07:00</Time>
-    </Item>
-    <Item>
-      <Source>WhitePixel.bmp</Source>
-      <Name>WhitePixel</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>E:\Project\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\WhitePixel.xnb</Output>
-      <Time>2014-02-04T17:51:33.4266641+07:00</Time>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\song\levelmusic.xnb</Output>
+      <Extra>E:\Project\Git\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\song\levelmusic.wma</Extra>
+      <Time>2014-02-07T15:51:58.1131008+07:00</Time>
     </Item>
     <Item>
       <Source>sfx\button.mp3</Source>
@@ -52,7 +17,7 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\Project\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\sfx\button.xnb</Output>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\sfx\button.xnb</Output>
       <Time>2014-02-04T17:59:31.0740438+07:00</Time>
     </Item>
     <Item>
@@ -61,9 +26,63 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\Project\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\song\mainmusic.xnb</Output>
-      <Extra>E:\Project\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\song\mainmusic.wma</Extra>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\song\mainmusic.xnb</Output>
+      <Extra>E:\Project\Git\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\song\mainmusic.wma</Extra>
       <Time>2014-02-04T18:15:48.7378233+07:00</Time>
+    </Item>
+    <Item>
+      <Source>menu\background.png</Source>
+      <Name>menu\background</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\menu\background.xnb</Output>
+      <Time>2014-02-04T17:17:52.2152198+07:00</Time>
+    </Item>
+    <Item>
+      <Source>menu\playbutton.png</Source>
+      <Name>menu\playbutton</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\menu\playbutton.xnb</Output>
+      <Time>2014-02-04T17:23:14.6047331+07:00</Time>
+    </Item>
+    <Item>
+      <Source>menu\hero.png</Source>
+      <Name>menu\hero</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\menu\hero.xnb</Output>
+      <Time>2014-02-04T17:34:20.0666111+07:00</Time>
+    </Item>
+    <Item>
+      <Source>WhitePixel.bmp</Source>
+      <Name>WhitePixel</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\WhitePixel.xnb</Output>
+      <Time>2014-02-04T17:51:33.4266641+07:00</Time>
+    </Item>
+    <Item>
+      <Source>level\background.jpg</Source>
+      <Name>level\background</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\level\background.xnb</Output>
+      <Time>2014-02-07T15:44:08.0575195+07:00</Time>
+    </Item>
+    <Item>
+      <Source>font\font.spritefont</Source>
+      <Name>font\font</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\font\font.xnb</Output>
+      <Time>2014-02-04T17:29:43.9571195+07:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -72,10 +91,10 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>E:\Project\WarpJam\WarpJam\WarpJamContent\</RootDirectory>
-      <LoggerRootDirectory>E:\Project\WarpJam\WarpJam\WarpJam\</LoggerRootDirectory>
-      <IntermediateDirectory>E:\Project\WarpJam\WarpJam\WarpJam\obj\Windows Phone\Debug\</IntermediateDirectory>
-      <OutputDirectory>E:\Project\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\</OutputDirectory>
+      <RootDirectory>E:\Project\Git\WarpJam\WarpJam\WarpJamContent\</RootDirectory>
+      <LoggerRootDirectory>E:\Project\Git\WarpJam\WarpJam\WarpJam\</LoggerRootDirectory>
+      <IntermediateDirectory>E:\Project\Git\WarpJam\WarpJam\WarpJam\obj\Windows Phone\Debug\</IntermediateDirectory>
+      <OutputDirectory>E:\Project\Git\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>

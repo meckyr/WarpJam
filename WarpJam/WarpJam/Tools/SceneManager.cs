@@ -23,8 +23,10 @@ namespace WarpJam.Tools
         
         // kumpulan music
         public static Song mainmusic;
+        public static Song levelmusic;
 
         public static bool IsMenuInitialized = false;
+        public static bool IsMusicPlaying = false;
 
         public static VibrateController Vibrator = VibrateController.Default;
 
@@ -66,30 +68,42 @@ namespace WarpJam.Tools
 
         public static void PlaySong(int songnumber)
         {
-            if (MediaPlayer.State == MediaState.Playing)
-            {
-                MessageBoxResult Choice;
-                Choice = MessageBox.Show("Media is currently playing music, do you want to stop it?", "Background Music", MessageBoxButton.OKCancel);
-
-                if (Choice == MessageBoxResult.OK)
-                {
-                    if (songnumber == 1)
-                        MediaPlayer.Play(mainmusic);
-                    else
-                        MediaPlayer.Play(mainmusic);
-
-                    MediaPlayer.IsRepeating = true;
-                }
-
-            }
-            else
+            if (IsMusicPlaying)
             {
                 if (songnumber == 1)
                     MediaPlayer.Play(mainmusic);
                 else
-                    MediaPlayer.Play(mainmusic);
+                    MediaPlayer.Play(levelmusic);
+            }
+            else
+            {
+                if (MediaPlayer.State == MediaState.Playing)
+                {
+                    MessageBoxResult Choice;
+                    Choice = MessageBox.Show("Media is currently playing music, do you want to stop it?", "Background Music", MessageBoxButton.OKCancel);
 
-                MediaPlayer.IsRepeating = true;
+                    if (Choice == MessageBoxResult.OK)
+                    {
+                        if (songnumber == 1)
+                            MediaPlayer.Play(mainmusic);
+                        else
+                            MediaPlayer.Play(levelmusic);
+
+                        MediaPlayer.IsRepeating = true;
+                        IsMusicPlaying = true;
+                    }
+
+                }
+                else
+                {
+                    if (songnumber == 1)
+                        MediaPlayer.Play(mainmusic);
+                    else
+                        MediaPlayer.Play(levelmusic);
+
+                    MediaPlayer.IsRepeating = true;
+                    IsMusicPlaying = true;
+                }
             }
         }
 
@@ -97,7 +111,8 @@ namespace WarpJam.Tools
         {
             push = contentmanager.Load<SoundEffect>("sfx\\button");
             mainmusic = contentmanager.Load<Song>("song\\mainmusic");
-            
+            levelmusic = contentmanager.Load<Song>("song\\levelmusic");
+
             // mainkan musik
             PlaySong(1);
 

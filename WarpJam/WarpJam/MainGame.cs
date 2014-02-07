@@ -25,7 +25,7 @@ namespace WarpJam
         public MainGame()
         {
             graphics = new GraphicsDeviceManager(this);
-            
+
             // Set full screen
             graphics.IsFullScreen = true;
             // Set orientation
@@ -109,6 +109,7 @@ namespace WarpJam
                     SceneManager.push.Play();
                     SceneManager.SetActiveScene("MainMenu");
                     SceneManager.ActiveScene.ResetScene();
+                    SceneManager.PlaySong(1);
                 }
             }
 
