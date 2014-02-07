@@ -11,6 +11,7 @@ using Microsoft.Xna.Framework.Input.Touch;
 using Microsoft.Xna.Framework.Media;
 using Microsoft.Phone.Shell;
 using WarpJam.Tools;
+using System.Windows;
 
 //coba ngepush
 namespace WarpJam
@@ -103,7 +104,11 @@ namespace WarpJam
             {
                 if (SceneManager.ActiveScene.SceneName == "MainMenu")
                 {
-                    this.Exit();
+                    MessageBoxResult Choice;
+                    Choice = MessageBox.Show("Are you sure?", "Exit Game", MessageBoxButton.OKCancel);
+
+                    if (Choice == MessageBoxResult.OK)
+                        this.Exit();
                 }
                 else if (SceneManager.ActiveScene.SceneName == "MainLevel")
                 {

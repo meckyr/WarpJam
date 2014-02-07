@@ -39,6 +39,11 @@ E:\Project\Git\WarpJam\WarpJam\WarpJam\obj\Windows Phone\Debug\WMAppManifest.xml
 E:\Project\Git\WarpJam\WarpJam\WarpJam\obj\Windows Phone\Debug\WMAppManifest.xml
 E:\Project\Git\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\WarpJam.xap
 E:\Project\Git\WarpJam\WarpJam\WarpJam\obj\Windows Phone\Debug\XapCacheFile.xml
+E:\Project\Git\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\level\invisbutton.xnb
+E:\Project\Git\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\level\bullet.xnb
+E:\Project\Git\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\sfx\gunfire.xnb
+E:\Project\Git\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\level\herop.xnb
+E:\Project\Git\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\level\hero.xnb
 E:\Project\Git\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\WarpJam.xap
 E:\Project\Git\WarpJam\WarpJam\WarpJam\obj\Windows Phone\Debug\XapCacheFile.xml
 E:\Project\Git\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\AppManifest.xaml

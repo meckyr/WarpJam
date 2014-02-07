@@ -84,6 +84,51 @@
       <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\font\font.xnb</Output>
       <Time>2014-02-04T17:29:43.9571195+07:00</Time>
     </Item>
+    <Item>
+      <Source>level\invisbutton.jpg</Source>
+      <Name>level\invisbutton</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\level\invisbutton.xnb</Output>
+      <Time>2014-02-07T21:59:21.9430417+07:00</Time>
+    </Item>
+    <Item>
+      <Source>level\bullet.png</Source>
+      <Name>level\bullet</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\level\bullet.xnb</Output>
+      <Time>2014-02-07T22:03:12.4114947+07:00</Time>
+    </Item>
+    <Item>
+      <Source>sfx\gunfire.mp3</Source>
+      <Name>sfx\gunfire</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\sfx\gunfire.xnb</Output>
+      <Time>2014-02-07T22:14:22.4068967+07:00</Time>
+    </Item>
+    <Item>
+      <Source>level\herop.png</Source>
+      <Name>level\herop</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\level\herop.xnb</Output>
+      <Time>2014-02-07T22:21:56.3392505+07:00</Time>
+    </Item>
+    <Item>
+      <Source>level\hero.png</Source>
+      <Name>level\hero</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\level\hero.xnb</Output>
+      <Time>2014-02-07T22:22:41.907177+07:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{E58C7D9F-255F-4A8A-B1F4-E38D55067145}</ContentProjectGUID>
