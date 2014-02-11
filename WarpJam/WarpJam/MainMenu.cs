@@ -24,10 +24,14 @@ namespace WarpJam
         public MainMenu()
             : base("MainMenu")
         {
+        }
+
+        public override void Initialize()
+        {
             bg = new GameSprite("menu\\background");
             AddSceneObject(bg);
 
-            hero = new GameAnimatedSprite("menu\\hero", 8, 80, new Point(60,52));
+            hero = new GameAnimatedSprite("menu\\hero", 8, 80, new Point(60, 52));
             hero.Translate(400, 50);
             hero.PlayAnimation(true);
             AddSceneObject(hero);
@@ -43,7 +47,7 @@ namespace WarpJam
             };
             AddSceneObject(play);
 
-
+            base.Initialize();
         }
 
         public override void LoadContent(ContentManager contentmanager)

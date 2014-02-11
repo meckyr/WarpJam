@@ -76,15 +76,6 @@
       <Time>2014-02-08T23:58:30+07:00</Time>
     </Item>
     <Item>
-      <Source>level\background.jpg</Source>
-      <Name>level\background</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\level\background.xnb</Output>
-      <Time>2014-02-08T23:58:30+07:00</Time>
-    </Item>
-    <Item>
       <Source>level\invisbutton.jpg</Source>
       <Name>level\invisbutton</Name>
       <Importer>TextureImporter</Importer>
@@ -128,6 +119,33 @@
       <Options>None</Options>
       <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\font\font.xnb</Output>
       <Time>2014-02-08T23:58:30+07:00</Time>
+    </Item>
+    <Item>
+      <Source>level\background.png</Source>
+      <Name>level\background</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\level\background.xnb</Output>
+      <Time>2014-02-11T18:38:32.9417873+07:00</Time>
+    </Item>
+    <Item>
+      <Source>level\cloud.png</Source>
+      <Name>level\cloud</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\level\cloud.xnb</Output>
+      <Time>2014-02-11T18:40:48.7614709+07:00</Time>
+    </Item>
+    <Item>
+      <Source>level\mountain.png</Source>
+      <Name>level\mountain</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\level\mountain.xnb</Output>
+      <Time>2014-02-11T18:40:54.0431496+07:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
