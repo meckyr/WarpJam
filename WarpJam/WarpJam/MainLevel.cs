@@ -130,7 +130,7 @@ namespace WarpJam
         {
             base.Draw(rendercontext);
 
-            rendercontext.SpriteBatch.DrawString(text, "Ngetes deh...", new Vector2(470, 85), Color.White);
+            rendercontext.SpriteBatch.DrawString(text, "Time: " + MediaPlayer.PlayPosition.TotalSeconds, new Vector2(470, 85), Color.White);
         }
 
         public override void ResetScene()
