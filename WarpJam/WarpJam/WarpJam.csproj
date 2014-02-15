@@ -71,6 +71,10 @@
     <Compile Include="MainMenu.cs" />
     <Compile Include="Pesawat.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
+=======
+    <Compile Include="Tools\Background.cs" />
+>>>>>>> cd79e023624ff8f87b92a6bb208fcd71b03a6e70
     <Compile Include="Tools\Camera2D.cs" />
     <Compile Include="Tools\Extensions.cs" />
     <Compile Include="Tools\GameAnimatedSprite.cs" />

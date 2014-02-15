@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿<xapCache source="D:\Imagine\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\WarpJam.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="2/10/2014 7:17:00 PM">
   <file source="D:\Imagine\WarpJam\WarpJam\WarpJam\Background.png" archivePath="Background.png" lastWriteTime="2/9/2014 2:44:14 PM" />
   <file source="D:\Imagine\WarpJam\WarpJam\WarpJam\PhoneGameThumb.png" archivePath="PhoneGameThumb.png" lastWriteTime="2/9/2014 2:44:14 PM" />
@@ -20,4 +21,30 @@
   <file source="D:\Imagine\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\font\font.xnb" archivePath="Content\font\font.xnb" lastWriteTime="2/9/2014 2:51:15 PM" />
   <file source="D:\Imagine\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\song\levelmusic.wma" archivePath="Content\song\levelmusic.wma" lastWriteTime="2/9/2014 2:50:07 PM" />
   <file source="D:\Imagine\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\song\mainmusic.wma" archivePath="Content\song\mainmusic.wma" lastWriteTime="2/9/2014 2:50:13 PM" />
+=======
+﻿<xapCache source="E:\Project\Git\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\WarpJam.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="11/02/2014 20:04:21">
+  <file source="E:\Project\Git\WarpJam\WarpJam\WarpJam\Background.png" archivePath="Background.png" lastWriteTime="08/02/2014 23:58:30" />
+  <file source="E:\Project\Git\WarpJam\WarpJam\WarpJam\PhoneGameThumb.png" archivePath="PhoneGameThumb.png" lastWriteTime="08/02/2014 23:58:30" />
+  <file source="E:\Project\Git\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="09/02/2014 18:20:28" />
+  <file source="E:\Project\Git\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="09/02/2014 18:20:28" />
+  <file source="E:\Project\Git\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\WarpJam.dll" archivePath="WarpJam.dll" lastWriteTime="11/02/2014 20:04:19" />
+  <file source="E:\Project\Git\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\song\levelmusic.xnb" archivePath="Content\song\levelmusic.xnb" lastWriteTime="11/02/2014 19:35:55" />
+  <file source="E:\Project\Git\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\sfx\button.xnb" archivePath="Content\sfx\button.xnb" lastWriteTime="09/02/2014 18:20:24" />
+  <file source="E:\Project\Git\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\song\mainmusic.xnb" archivePath="Content\song\mainmusic.xnb" lastWriteTime="09/02/2014 18:20:27" />
+  <file source="E:\Project\Git\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\sfx\gunfire.xnb" archivePath="Content\sfx\gunfire.xnb" lastWriteTime="09/02/2014 18:20:27" />
+  <file source="E:\Project\Git\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\menu\background.xnb" archivePath="Content\menu\background.xnb" lastWriteTime="09/02/2014 18:20:27" />
+  <file source="E:\Project\Git\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\menu\playbutton.xnb" archivePath="Content\menu\playbutton.xnb" lastWriteTime="09/02/2014 18:20:27" />
+  <file source="E:\Project\Git\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\menu\hero.xnb" archivePath="Content\menu\hero.xnb" lastWriteTime="09/02/2014 18:20:27" />
+  <file source="E:\Project\Git\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\WhitePixel.xnb" archivePath="Content\WhitePixel.xnb" lastWriteTime="09/02/2014 18:20:27" />
+  <file source="E:\Project\Git\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\level\invisbutton.xnb" archivePath="Content\level\invisbutton.xnb" lastWriteTime="09/02/2014 18:20:27" />
+  <file source="E:\Project\Git\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\level\bullet.xnb" archivePath="Content\level\bullet.xnb" lastWriteTime="09/02/2014 18:20:27" />
+  <file source="E:\Project\Git\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\level\herop.xnb" archivePath="Content\level\herop.xnb" lastWriteTime="09/02/2014 18:20:27" />
+  <file source="E:\Project\Git\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\level\hero.xnb" archivePath="Content\level\hero.xnb" lastWriteTime="09/02/2014 18:20:27" />
+  <file source="E:\Project\Git\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\font\font.xnb" archivePath="Content\font\font.xnb" lastWriteTime="09/02/2014 18:20:28" />
+  <file source="E:\Project\Git\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\level\background.xnb" archivePath="Content\level\background.xnb" lastWriteTime="11/02/2014 18:53:13" />
+  <file source="E:\Project\Git\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\level\cloud.xnb" archivePath="Content\level\cloud.xnb" lastWriteTime="11/02/2014 18:53:13" />
+  <file source="E:\Project\Git\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\level\mountain.xnb" archivePath="Content\level\mountain.xnb" lastWriteTime="11/02/2014 18:53:13" />
+  <file source="E:\Project\Git\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\song\levelmusic.wma" archivePath="Content\song\levelmusic.wma" lastWriteTime="11/02/2014 19:35:55" />
+  <file source="E:\Project\Git\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\song\mainmusic.wma" archivePath="Content\song\mainmusic.wma" lastWriteTime="09/02/2014 18:20:27" />
+>>>>>>> cd79e023624ff8f87b92a6bb208fcd71b03a6e70
 </xapCache>

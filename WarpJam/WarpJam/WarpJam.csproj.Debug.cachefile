@@ -6,11 +6,13 @@ Content\menu\background.xnb
 Content\menu\playbutton.xnb
 Content\menu\hero.xnb
 Content\WhitePixel.xnb
-Content\level\background.xnb
 Content\level\invisbutton.xnb
 Content\level\bullet.xnb
 Content\level\herop.xnb
 Content\level\hero.xnb
 Content\font\font.xnb
+Content\level\background.xnb
+Content\level\cloud.xnb
+Content\level\mountain.xnb
 Content\song\levelmusic.wma
 Content\song\mainmusic.wma
