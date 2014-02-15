@@ -9,6 +9,7 @@ using Microsoft.Xna.Framework.Input.Touch;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using System.Windows;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace WarpJam.Tools
 {
@@ -147,9 +148,18 @@ namespace WarpJam.Tools
         {
             if (ActiveScene != null)
             {
-                RenderContext.SpriteBatch.Begin();
-                ActiveScene.Draw(RenderContext);
-                RenderContext.SpriteBatch.End();
+                if (CameraManager.getInstance().camera.Focus == null)
+                {
+                    RenderContext.SpriteBatch.Begin();
+                    ActiveScene.Draw(RenderContext);
+                    RenderContext.SpriteBatch.End();
+                }
+                else
+                {
+                    RenderContext.SpriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, null, null, null, null, CameraManager.getInstance().camera.Transform);
+                    ActiveScene.Draw(RenderContext);
+                    RenderContext.SpriteBatch.End();
+                }
             }
         }
 

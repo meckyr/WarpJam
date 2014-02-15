@@ -8,7 +8,7 @@ using System.Diagnostics;
 
 namespace WarpJam.Tools
 {
-    class GameObject2D
+    class GameObject2D : IFocusable
     {
         private GameScene scene;
 
@@ -194,6 +194,18 @@ namespace WarpJam.Tools
             //{
             //    BoundingRect.Value.Draw(renderContext, Color.Red);
             //}
+        }
+
+        public Vector2 Position
+        {
+            get
+            {
+                return WorldPosition;
+            }
+            set
+            {
+                WorldPosition = value;
+            }
         }
     }
 }

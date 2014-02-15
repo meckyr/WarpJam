@@ -32,7 +32,9 @@ namespace WarpJam
             graphics.IsFullScreen = true;
             // Set orientation
             graphics.SupportedOrientations = DisplayOrientation.LandscapeLeft;
-            
+
+            CameraManager.prepareManager(new Camera2D(this));
+            Components.Add(CameraManager.getInstance().camera);
             Content.RootDirectory = "Content";
 
             // Frame rate is 30 fps by default for Windows Phone.

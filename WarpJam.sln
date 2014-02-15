@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarpJam", "WarpJam\WarpJam\WarpJam.csproj", "{A077E6F3-34EA-4A15-83C2-C4AEF32C903A}"
 EndProject
-Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "WarpJamContent", "WarpJam\WarpJamContent\WarpJamContent.contentproj", "{E58C7D9F-255F-4A8A-B1F4-E38D55067145}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarpJamContent", "WarpJam\WarpJamContent\WarpJamContent.contentproj", "{E58C7D9F-255F-4A8A-B1F4-E38D55067145}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

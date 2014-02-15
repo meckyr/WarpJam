@@ -38,7 +38,7 @@ namespace WarpJam.Tools
         public Vector2 ScreenCenter { get; protected set; }
         public Matrix Transform { get; set; }
         public IFocusable Focus { get { return focus; } set { focus = value; } }
-        public IFocusable focus;
+        private IFocusable focus;
         public float MoveSpeed { get; set; }
 
         #endregion
@@ -53,31 +53,34 @@ namespace WarpJam.Tools
             _position = new Vector2();
             ScreenCenter = new Vector2(_viewportWidth / 2, _viewportHeight / 2);
             Scale = 1;
-            MoveSpeed = 1.25f;
+            MoveSpeed = 4f;
 
             base.Initialize();
         }
 
         public override void Update(GameTime gameTime)
         {
-            // Create the Transform used by any
-            // spritebatch process
-            Transform = Matrix.Identity *
-                        Matrix.CreateTranslation(-Position.X, -Position.Y, 0) *
-                        Matrix.CreateRotationZ(Rotation) *
-                        Matrix.CreateTranslation(Origin.X, Origin.Y, 0) *
-                        Matrix.CreateScale(new Vector3(Scale, Scale, Scale));
+            if (Focus != null)
+            {
+                // Create the Transform used by any
+                // spritebatch process
+                Transform = Matrix.Identity *
+                            Matrix.CreateTranslation(-Position.X, -Position.Y, 0) *
+                            Matrix.CreateRotationZ(Rotation) *
+                            Matrix.CreateTranslation(Origin.X, Origin.Y, 0) *
+                            Matrix.CreateScale(new Vector3(Scale, Scale, Scale));
 
-            Origin = ScreenCenter / Scale;
+                Origin = ScreenCenter / Scale;
 
-            // Move the Camera to the position that it needs to go
-            var delta = (float)gameTime.ElapsedGameTime.TotalSeconds;
+                // Move the Camera to the position that it needs to go
+                var delta = (float)gameTime.ElapsedGameTime.TotalSeconds;
 
 
-            _position.X += (Focus.Position.X - Position.X) * MoveSpeed * delta;
-            _position.Y += (Focus.Position.Y - Position.Y) * MoveSpeed * delta;
+                _position.X += (Focus.Position.X - Position.X) * MoveSpeed * delta;
+                _position.Y += (Focus.Position.Y - Position.Y) * MoveSpeed * delta;
 
-            base.Update(gameTime);
+                base.Update(gameTime);
+            }
         }
 
         /// <summary>

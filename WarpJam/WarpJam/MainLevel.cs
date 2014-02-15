@@ -129,7 +129,6 @@ namespace WarpJam
         public override void Draw(RenderContext rendercontext)
         {
             base.Draw(rendercontext);
-
             rendercontext.SpriteBatch.DrawString(text, "Time: " + MediaPlayer.PlayPosition.TotalSeconds, new Vector2(470, 85), Color.White);
         }
 

@@ -75,9 +75,3 @@ E:\Project\Git\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\level\clo
 E:\Project\Git\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\level\mountain.xnb
 D:\Imagine\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\level\cloud.xnb
 D:\Imagine\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\level\mountain.xnb
-D:\Imagine\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\WarpJam.xap
-D:\Imagine\WarpJam\WarpJam\WarpJam\obj\Windows Phone\Debug\XapCacheFile.xml
-D:\Imagine\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\AppManifest.xaml
-D:\Imagine\WarpJam\WarpJam\WarpJam\obj\Windows Phone\Debug\WMAppManifest.xml.g
-D:\Imagine\WarpJam\WarpJam\WarpJam\obj\Windows Phone\Debug\WMAppManifest.xml
-bin\Windows Phone\Debug\
