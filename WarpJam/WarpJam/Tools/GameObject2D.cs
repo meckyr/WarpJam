@@ -32,7 +32,7 @@ namespace WarpJam.Tools
         public Vector2 PivotPoint { get; set; }
 
         public Vector2 LocalPosition { get; set; }
-        public Vector2 WorldPosition { get; private set; }
+        public Vector2 WorldPosition { get; protected set; }
 
         public Vector2 LocalScale { get; set; }
         public Vector2 WorldScale { get; private set; }
