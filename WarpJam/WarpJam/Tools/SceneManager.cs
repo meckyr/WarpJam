@@ -160,6 +160,12 @@ namespace WarpJam.Tools
                     ActiveScene.Draw(RenderContext);
                     RenderContext.SpriteBatch.End();
                 }
+
+                //draw HUD
+                RenderContext.SpriteBatch.Begin();
+                ActiveScene.DrawHUD(RenderContext);
+                RenderContext.SpriteBatch.End();
+
             }
         }
 

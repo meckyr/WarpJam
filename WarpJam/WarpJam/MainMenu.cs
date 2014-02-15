@@ -45,7 +45,7 @@ namespace WarpJam
                 SceneManager.SetActiveScene("MainLevel");
                 SceneManager.ActiveScene.ResetScene();
             };
-            AddSceneObject(play);
+            AddHUDObject(play);
 
             base.Initialize();
         }
