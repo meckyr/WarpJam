@@ -12,7 +12,7 @@ Content\level\invisbutton.xnb
 Content\level\bullet.xnb
 Content\level\herop.xnb
 Content\level\hero.xnb
-Content\font\font.xnb
 Content\level\background.xnb
 Content\level\cloud.xnb
 Content\level\mountain.xnb
+Content\font\font.xnb

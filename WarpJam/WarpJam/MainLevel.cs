@@ -22,18 +22,6 @@ namespace WarpJam
         private SpriteFont text;
         private SoundEffect gunfire;
 
-<<<<<<< HEAD
-        // atribut visualizer
-        private Color color = Color.White;
-        private VisualizationData visdat = new VisualizationData();
-        private int barWidth = 800 / 256;
-        private int barHeight = 5;
-        private int amount;
-
-        private Pesawat pesawat;
-
-=======
->>>>>>> cd79e023624ff8f87b92a6bb208fcd71b03a6e70
         public MainLevel()
             : base("MainLevel")
         {
@@ -49,28 +37,21 @@ namespace WarpJam
             bg = new Background();
             AddSceneObject(bg);
 
-            //hero = new GameAnimatedSprite("level\\hero", 8, 80, new Point(58, 50));
-            //hero.CreateBoundingRect(58, 50, false);
-            //hero.Origin = new Vector2(29, 25);
-            //hero.Translate(60, 200);
-            //hero.PlayAnimation(true);
-            //AddSceneObject(hero);
+            hero = new GameAnimatedSprite("level\\hero", 8, 80, new Point(58, 50));
+            hero.CreateBoundingRect(58, 50, false);
+            hero.Origin = new Vector2(29, 25);
+            hero.Translate(60, 200);
+            hero.PlayAnimation(true);
+            AddSceneObject(hero);
 
-            //herop = new GameAnimatedSprite("level\\herop", 8, 80, new Point(60, 52));
-            //herop.CreateBoundingRect(60, 52, false);
-            //herop.Origin = new Vector2(30, 26);
-            //herop.Translate(60, 200);
-            //herop.CanDraw = false;
-            //herop.PlayAnimation(true);
-            //AddSceneObject(herop);
+            herop = new GameAnimatedSprite("level\\herop", 8, 80, new Point(60, 52));
+            herop.CreateBoundingRect(60, 52, false);
+            herop.Origin = new Vector2(30, 26);
+            herop.Translate(60, 200);
+            herop.CanDraw = false;
+            herop.PlayAnimation(true);
+            AddSceneObject(herop);
 
-            pesawat = new Pesawat("level\\hero", 8, 80, new Point(58, 50));
-            pesawat.CreateBoundingRect(58, 50, false);
-            pesawat.Origin = new Vector2(29, 25);
-            pesawat.PlayAnimation(true);
-            pesawat.Translate(100, 240);
-            AddSceneObject(pesawat);
-            
             fire = new GameButton("level\\invisbutton", false);
             fire.CanDraw = false;
             fire.Translate(400, 0);
@@ -81,15 +62,7 @@ namespace WarpJam
             };
             AddSceneObject(fire);
 
-<<<<<<< HEAD
-
-            MediaPlayer.IsVisualizationEnabled = true;
-
-            // enable gesture
-            TouchPanel.EnabledGestures = GestureType.VerticalDrag;
-=======
             base.Initialize();
->>>>>>> cd79e023624ff8f87b92a6bb208fcd71b03a6e70
         }
 
         private int GetAverage(Point Between, VisualizationData _visData)
@@ -162,9 +135,9 @@ namespace WarpJam
 
         public override void ResetScene()
         {
-            //hero.Translate(60, 200);
-            //herop.Translate(60, 200);
-            //herop.CanDraw = false;
+            hero.Translate(60, 200);
+            herop.Translate(60, 200);
+            herop.CanDraw = false;
         }
     }
 }
