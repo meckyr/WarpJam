@@ -200,11 +200,11 @@ namespace WarpJam.Tools
         {
             get
             {
-                return WorldPosition;
+                return LocalPosition;
             }
             set
             {
-                WorldPosition = value;
+                LocalPosition = value;
             }
         }
     }

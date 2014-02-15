@@ -13,7 +13,6 @@ using Microsoft.Phone.Shell;
 using WarpJam.Tools;
 using System.Windows;
 
-//coba ngepush
 namespace WarpJam
 {
     /// <summary>
@@ -44,8 +43,8 @@ namespace WarpJam
             InactiveSleepTime = TimeSpan.FromSeconds(1);
 
             // Disable autolocking
-            //PhoneApplicationService phoneAppService = PhoneApplicationService.Current;
-            //phoneAppService.UserIdleDetectionMode = IdleDetectionMode.Disabled;
+            PhoneApplicationService phoneAppService = PhoneApplicationService.Current;
+            phoneAppService.UserIdleDetectionMode = IdleDetectionMode.Disabled;
         }
 
         /// <summary>
@@ -106,11 +105,14 @@ namespace WarpJam
             {
                 if (SceneManager.ActiveScene.SceneName == "MainMenu")
                 {
-                    MessageBoxResult Choice;
-                    Choice = MessageBox.Show("Are you sure?", "Exit Game", MessageBoxButton.OKCancel);
+                    if (SceneManager.ActiveScene.BackPressed())
+                    {
+                        MessageBoxResult Choice;
+                        Choice = MessageBox.Show("Are you sure?", "Exit Game", MessageBoxButton.OKCancel);
 
-                    if (Choice == MessageBoxResult.OK)
-                        this.Exit();
+                        if (Choice == MessageBoxResult.OK)
+                            this.Exit();
+                    }
                 }
                 else if (SceneManager.ActiveScene.SceneName == "MainLevel")
                 {

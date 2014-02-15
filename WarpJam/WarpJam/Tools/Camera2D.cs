@@ -75,7 +75,6 @@ namespace WarpJam.Tools
                 // Move the Camera to the position that it needs to go
                 var delta = (float)gameTime.ElapsedGameTime.TotalSeconds;
 
-
                 _position.X += (Focus.Position.X - Position.X) * MoveSpeed * delta;
                 _position.Y += (Focus.Position.Y - Position.Y) * MoveSpeed * delta;
 

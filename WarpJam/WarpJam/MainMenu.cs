@@ -16,10 +16,13 @@ namespace WarpJam
 {
     class MainMenu : GameScene 
     {
-        private GameButton play;
+        private GameButton play, setting, score;
         private GameSprite bg;
         private GameAnimatedSprite hero;
         private SpriteFont text;
+
+        // Pengecekan State
+        private bool isOnMenu = true;
 
         public MainMenu()
             : base("MainMenu")
@@ -32,12 +35,13 @@ namespace WarpJam
             AddSceneObject(bg);
 
             hero = new GameAnimatedSprite("menu\\hero", 8, 80, new Point(60, 52));
-            hero.Translate(400, 200);
+            hero.Translate(400, 240);
             hero.PlayAnimation(true);
             AddSceneObject(hero);
             CameraManager.getInstance().camera.Focus = hero;
+
             play = new GameButton("menu\\playbutton", true);
-            play.Translate(200, 200);
+            play.Translate(100, 100);
             play.OnClick += () =>
             {
                 SceneManager.push.Play();
@@ -45,7 +49,27 @@ namespace WarpJam
                 SceneManager.SetActiveScene("MainLevel");
                 SceneManager.ActiveScene.ResetScene();
             };
-            AddHUDObject(play);
+            AddSceneObject(play);
+
+            setting = new GameButton("menu\\settingbutton", true);
+            setting.Translate(100, 220);
+            setting.OnClick += () =>
+            {
+                SceneManager.push.Play();
+                isOnMenu = false;
+                hero.Translate(1200, 240);
+            };
+            AddSceneObject(setting);
+
+            score = new GameButton("menu\\scorebutton", true);
+            score.Translate(100, 340);
+            score.OnClick += () =>
+            {
+                SceneManager.push.Play();
+                isOnMenu = false;
+                hero.Translate(400, 720);
+            };
+            AddSceneObject(score);
 
             base.Initialize();
         }
@@ -72,6 +96,19 @@ namespace WarpJam
         public override void ResetScene()
         {
             play.BackToNormal();
+            CameraManager.getInstance().camera.Focus = hero;
+        }
+
+        public override bool BackPressed()
+        {
+            if (isOnMenu)
+                return true;
+            else
+            {
+                isOnMenu = true;
+                hero.Translate(400, 240);
+                return false;
+            }
         }
     }
 }

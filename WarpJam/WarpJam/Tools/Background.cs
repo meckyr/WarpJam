@@ -8,7 +8,7 @@ namespace WarpJam.Tools
 {
     class Background : GameObject2D
     {
-        private GameSprite bg;
+        
 
         private const float mountain_speed = 0.4f;
         private GameSprite mountain;
@@ -18,9 +18,6 @@ namespace WarpJam.Tools
 
         public override void Initialize()
         {
-            bg = new GameSprite("level\\background");
-            AddChild(bg);
-
             mountain = new GameSprite("level\\mountain");
             AddChild(mountain);
 
@@ -41,7 +38,7 @@ namespace WarpJam.Tools
             if (objectPosX < -800)
                 objectPosX += 800;
 
-            mountain.Translate(objectPosX, 225);
+            mountain.Translate(objectPosX, 320);
 
             // cloud
             objectSpeed = renderContext.GameSpeed * cloud_speed;

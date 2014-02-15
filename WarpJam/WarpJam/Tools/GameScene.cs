@@ -85,6 +85,6 @@ namespace WarpJam.Tools
 
         public virtual void ChangeCalibrationValue() { }
 
-        public virtual void BackPressed() { }
+        public virtual bool BackPressed() { return false; }
     }
 }
