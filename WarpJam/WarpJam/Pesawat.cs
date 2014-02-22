@@ -27,18 +27,18 @@ namespace WarpJam
             Destroyed
         }
 
-        public float acceleration = 1.5f;
+        public const float Acceleration = 1.5f;
+        private const float Threshold = 2.0f;
 
         public override void Initialize()
         {
             // enable gesture
             TouchPanel.EnabledGestures = GestureType.VerticalDrag;
 
-            pesawat = new GameAnimatedSprite("level\\hero", 8, 80, new Point(58, 50));
+            pesawat = new GameAnimatedSprite("level\\pesawat", 4, 80, new Point(94, 58));
             pesawat.CreateBoundingRect(58, 50, false);
             pesawat.Origin = new Vector2(29, 25);
             pesawat.Translate(0, 240);
-            pesawat.PlayAnimation(true);
             AddChild(pesawat);
 
             base.Initialize();
@@ -59,7 +59,7 @@ namespace WarpJam
         public override void Update(RenderContext renderContext)
         {
             // Pesawat jalan
-            var objectSpeed = renderContext.GameSpeed * acceleration;
+            var objectSpeed = renderContext.GameSpeed * Acceleration;
             objectSpeed *= (float)renderContext.GameTime.ElapsedGameTime.TotalSeconds;
 
             var objectPosX = pesawat.LocalPosition.X + objectSpeed;
@@ -78,11 +78,32 @@ namespace WarpJam
                         dragDelta = gs.Delta;
                         break;
                 }
-                pesawat.Translate(pesawat.LocalPosition + dragDelta);
+
+                // animasi
+                var oldPos = pesawat.LocalPosition.Y;
+                Vector2 nextPosition = pesawat.LocalPosition + dragDelta;
+                var newPos = nextPosition.Y;
+
+                var delta = newPos - oldPos;
+
+                if (delta > 0)
+                {
+                    pesawat.CurrentFrame = 1;
+                }
+                else if (delta < 0)
+                {
+                    pesawat.CurrentFrame = 3;
+                }
+                else 
+                {
+                    pesawat.CurrentFrame = 0;
+                }
+
+                pesawat.Translate(nextPosition);
 
                 // Cek limit top-bottom
-                var topLimit = 25;
-                var bottomLimit = renderContext.GraphicsDevice.Viewport.Height - 25;
+                var topLimit = pesawat.Height / 2;
+                var bottomLimit = renderContext.GraphicsDevice.Viewport.Height - (pesawat.Height / 2);
 
                 if (pesawat.LocalPosition.Y <= topLimit)
                 {

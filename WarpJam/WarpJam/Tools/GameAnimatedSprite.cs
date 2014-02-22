@@ -112,6 +112,23 @@ namespace WarpJam.Tools
                     }
                 }
             }
+            else
+            {
+                if (rowCount > 1)
+                {
+                    frameRect.Location = new Point(FrameSize.X
+                        * (CurrentFrame % columnCount), FrameSize.Y
+                        * (int)Math.Floor(CurrentFrame / columnCount)
+                        );
+                }
+                else
+                {
+                    frameRect.Location = new Point(FrameSize.X
+                        * CurrentFrame, 0);
+                }
+
+                DrawRect = frameRect;
+            }
 
             base.Update(renderContext);
         }

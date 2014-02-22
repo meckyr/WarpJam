@@ -18,7 +18,7 @@ namespace WarpJam
     {
         private GameButton play, setting, score;
         private GameSprite bg;
-        private GameAnimatedSprite hero;
+        private GameAnimatedSprite star1, star2, star3, star4, star5;
         private SpriteFont text;
 
         // Pengecekan State
@@ -34,11 +34,13 @@ namespace WarpJam
             bg = new GameSprite("menu\\background");
             AddSceneObject(bg);
 
-            hero = new GameAnimatedSprite("menu\\hero", 8, 80, new Point(60, 52));
-            hero.Translate(400, 240);
-            hero.PlayAnimation(true);
-            AddSceneObject(hero);
-            CameraManager.getInstance().camera.Focus = hero;
+            star1 = new GameAnimatedSprite("menu\\star", 10, 50, new Point(55, 58));
+            star1.Translate(400, 240);
+            star1.PlayAnimation(true);
+            AddSceneObject(star1);
+            CameraManager.getInstance().camera.Focus = star1;
+
+            InitiateStar();
 
             play = new GameButton("menu\\playbutton", true);
             play.Translate(100, 100);
@@ -57,7 +59,7 @@ namespace WarpJam
             {
                 SceneManager.push.Play();
                 isOnMenu = false;
-                hero.Translate(1200, 240);
+                star1.Translate(1200, 240);
             };
             AddSceneObject(setting);
 
@@ -67,11 +69,40 @@ namespace WarpJam
             {
                 SceneManager.push.Play();
                 isOnMenu = false;
-                hero.Translate(400, 720);
+                star1.Translate(400, 720);
             };
             AddSceneObject(score);
 
             base.Initialize();
+        }
+
+        public void InitiateStar()
+        {
+            star2 = new GameAnimatedSprite("menu\\star", 10, 105, new Point(55, 58));
+            star2.Color = Color.Cyan;
+            star2.Translate(720, 50);
+            star2.PlayAnimation(true);
+            AddSceneObject(star2);
+
+            star3 = new GameAnimatedSprite("menu\\star", 10, 80, new Point(55, 58));
+            star3.Color = Color.Cyan;
+            star3.Translate(10, 340);
+            star3.PlayAnimation(true);
+            AddSceneObject(star3);
+
+            star4 = new GameAnimatedSprite("menu\\star", 10, 65, new Point(55, 58));
+            star4.Color = Color.Cyan;
+            star4.Scale(2.0f, 2.0f);
+            star4.Translate(400, 400);
+            star4.PlayAnimation(true);
+            AddSceneObject(star4);
+
+            star5 = new GameAnimatedSprite("menu\\star", 10, 40, new Point(55, 58));
+            star5.Color = Color.Cyan;
+            star5.Scale(0.5f, 0.5f);
+            star5.Translate(500, 90);
+            star5.PlayAnimation(true);
+            AddSceneObject(star5);
         }
 
         public override void LoadContent(ContentManager contentmanager)
@@ -89,14 +120,12 @@ namespace WarpJam
         public override void Draw(RenderContext rendercontext)
         {
             base.Draw(rendercontext);
-
-            rendercontext.SpriteBatch.DrawString(text, "Ngetes deh...", new Vector2(470, 85), Color.Black);
         }
 
         public override void ResetScene()
         {
             play.BackToNormal();
-            CameraManager.getInstance().camera.Focus = hero;
+            CameraManager.getInstance().camera.Focus = star1;
         }
 
         public override bool BackPressed()
@@ -106,7 +135,7 @@ namespace WarpJam
             else
             {
                 isOnMenu = true;
-                hero.Translate(400, 240);
+                star1.Translate(400, 240);
                 return false;
             }
         }
