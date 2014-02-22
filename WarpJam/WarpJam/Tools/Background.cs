@@ -10,45 +10,38 @@ namespace WarpJam.Tools
     {
         
 
-        //private const float mountain_speed = 0.4f;
-        //private GameSprite mountain;
-
-        //private const float cloud_speed = 0.7f;
-        //private GameSprite cloud;
+        private const float bg_speed = 5.0f;
+        private GameSprite bg1, bg2;
 
         public override void Initialize()
         {
-            //mountain = new GameSprite("level\\mountain");
-            //AddChild(mountain);
+            bg1 = new GameSprite("level\\background1");
+            AddChild(bg1);
 
-            //cloud = new GameSprite("level\\cloud");
-            //AddChild(cloud);
+            bg2 = new GameSprite("level\\background2");
+            bg2.Translate(800, 0);
+            AddChild(bg2);
 
             base.Initialize();
         }
 
         public override void Update(RenderContext renderContext)
         {
-            // mountain
             // pastiin frame-rate independent
-            //var objectSpeed = renderContext.GameSpeed * mountain_speed;
-            //objectSpeed *= (float)renderContext.GameTime.ElapsedGameTime.TotalSeconds;
+            var objectSpeed = renderContext.GameSpeed * bg_speed;
+            objectSpeed *= (float)renderContext.GameTime.ElapsedGameTime.TotalSeconds;
 
-            //var objectPosX = mountain.LocalPosition.X - objectSpeed;
-            //if (objectPosX < -800)
-            //    objectPosX += 800;
+            var objectPosX = bg1.LocalPosition.X - objectSpeed;
+            if (objectPosX < -800)
+                objectPosX += 1600;
 
-            //mountain.Translate(objectPosX, 320);
+            bg1.Translate(objectPosX, 0);
 
-            //// cloud
-            //objectSpeed = renderContext.GameSpeed * cloud_speed;
-            //objectSpeed *= (float)renderContext.GameTime.ElapsedGameTime.TotalSeconds;
+            objectPosX = bg2.LocalPosition.X - objectSpeed;
+            if (objectPosX < -800)
+                objectPosX += 1600;
 
-            //objectPosX = cloud.LocalPosition.X - objectSpeed;
-            //if (objectPosX < -800)
-            //    objectPosX += 800;
-
-            //cloud.Translate(objectPosX, 25);
+            bg2.Translate(objectPosX, 0);
 
             base.Update(renderContext);
         }

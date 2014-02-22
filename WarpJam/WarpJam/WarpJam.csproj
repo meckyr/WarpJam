@@ -84,6 +84,7 @@
     <Compile Include="Tools\LineBatch.cs" />
     <Compile Include="Tools\RenderContext.cs" />
     <Compile Include="Tools\SceneManager.cs" />
+    <Compile Include="Tools\SpriteFonts.cs" />
     <None Include="Properties\AppManifest.xml">
       <XnaPlatformSpecific>true</XnaPlatformSpecific>
     </None>

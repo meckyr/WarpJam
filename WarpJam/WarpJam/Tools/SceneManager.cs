@@ -148,6 +148,11 @@ namespace WarpJam.Tools
         {
             if (ActiveScene != null)
             {
+                //draw HUD
+                RenderContext.SpriteBatch.Begin();
+                ActiveScene.DrawHUD(RenderContext);
+                RenderContext.SpriteBatch.End();
+
                 if (CameraManager.getInstance().camera.Focus == null)
                 {
                     RenderContext.SpriteBatch.Begin();
@@ -160,12 +165,6 @@ namespace WarpJam.Tools
                     ActiveScene.Draw(RenderContext);
                     RenderContext.SpriteBatch.End();
                 }
-
-                //draw HUD
-                RenderContext.SpriteBatch.Begin();
-                ActiveScene.DrawHUD(RenderContext);
-                RenderContext.SpriteBatch.End();
-
             }
         }
 

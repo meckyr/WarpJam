@@ -12,6 +12,7 @@ using Microsoft.Xna.Framework.Media;
 using Microsoft.Phone.Shell;
 using WarpJam.Tools;
 using System.Windows;
+using FarseerPhysics;
 
 namespace WarpJam
 {
@@ -29,8 +30,14 @@ namespace WarpJam
 
             // Set full screen
             graphics.IsFullScreen = true;
-            // Set orientation
+            // Set orientation & size
             graphics.SupportedOrientations = DisplayOrientation.LandscapeLeft;
+            graphics.PreferMultiSampling = true;
+            graphics.PreferredBackBufferWidth = 800;
+            graphics.PreferredBackBufferHeight = 480;
+
+            // Set farseer ratio (1 m = ?? px)
+            ConvertUnits.SetDisplayUnitToSimUnitRatio(100f);
 
             CameraManager.prepareManager(new Camera2D(this));
             Components.Add(CameraManager.getInstance().camera);

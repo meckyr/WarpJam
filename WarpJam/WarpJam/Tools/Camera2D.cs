@@ -21,6 +21,8 @@ namespace WarpJam.Tools
         protected float _viewportHeight;
         protected float _viewportWidth;
 
+        public bool IsIgnoreY { get; set; }
+
         public Camera2D(Game game)
             : base(game)
         { }
@@ -54,8 +56,19 @@ namespace WarpJam.Tools
             ScreenCenter = new Vector2(_viewportWidth / 2, _viewportHeight / 2);
             Scale = 1;
             MoveSpeed = 4f;
+            IsIgnoreY = false;
 
             base.Initialize();
+        }
+
+        public void SetScreenCenter(float x, float y)
+        {
+            ScreenCenter = new Vector2(_viewportWidth / x, _viewportHeight / y);
+        }
+
+        public void ResetScreenCenter() 
+        {
+            ScreenCenter = new Vector2(_viewportWidth / 2, _viewportHeight / 2);
         }
 
         public override void Update(GameTime gameTime)
@@ -76,7 +89,9 @@ namespace WarpJam.Tools
                 var delta = (float)gameTime.ElapsedGameTime.TotalSeconds;
 
                 _position.X += (Focus.Position.X - Position.X) * MoveSpeed * delta;
-                _position.Y += (Focus.Position.Y - Position.Y) * MoveSpeed * delta;
+
+                if (!IsIgnoreY)
+                    _position.Y += (Focus.Position.Y - Position.Y) * MoveSpeed * delta;
 
                 base.Update(gameTime);
             }

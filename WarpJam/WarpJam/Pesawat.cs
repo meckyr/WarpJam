@@ -35,7 +35,7 @@ namespace WarpJam
             // enable gesture
             TouchPanel.EnabledGestures = GestureType.VerticalDrag;
 
-            pesawat = new GameAnimatedSprite("level\\pesawat", 4, 80, new Point(94, 58));
+            pesawat = new GameAnimatedSprite("level\\pesawat", 4, 80, new Point(95, 60));
             pesawat.CreateBoundingRect(58, 50, false);
             pesawat.Origin = new Vector2(29, 25);
             pesawat.Translate(0, 240);
@@ -52,8 +52,6 @@ namespace WarpJam
         public override void LoadContent(ContentManager contentManager)
         {
             base.LoadContent(contentManager);
-
-            //pesawat.LoadContent(contentManager);
         }
 
         public override void Update(RenderContext renderContext)
@@ -66,55 +64,52 @@ namespace WarpJam
             pesawat.Translate(objectPosX, pesawat.LocalPosition.Y);
 
             // check gesture
-            while (TouchPanel.IsGestureAvailable)
+            if (!TouchPanel.IsGestureAvailable)
+                pesawat.CurrentFrame = 0;
+            else
             {
-                Vector2 dragPos = Vector2.Zero;
-                Vector2 dragDelta = Vector2.Zero;
-                GestureSample gs = TouchPanel.ReadGesture();
-                switch (gs.GestureType)
+                while (TouchPanel.IsGestureAvailable)
                 {
-                    case GestureType.VerticalDrag:
-                        dragPos = gs.Position;
-                        dragDelta = gs.Delta;
-                        break;
-                }
+                    Vector2 dragPos = Vector2.Zero;
+                    Vector2 dragDelta = Vector2.Zero;
+                    GestureSample gs = TouchPanel.ReadGesture();
+                    switch (gs.GestureType)
+                    {
+                        case GestureType.VerticalDrag:
+                            dragPos = gs.Position;
+                            dragDelta = gs.Delta;
+                            break;
+                    }
 
-                // animasi
-                var oldPos = pesawat.LocalPosition.Y;
-                Vector2 nextPosition = pesawat.LocalPosition + dragDelta;
-                var newPos = nextPosition.Y;
+                    // animasi
+                    var oldPos = pesawat.LocalPosition.Y;
+                    Vector2 nextPosition = pesawat.LocalPosition + (dragDelta * 1.2f);
+                    var newPos = nextPosition.Y;
 
-                var delta = newPos - oldPos;
+                    var delta = newPos - oldPos;
 
-                if (delta > 0)
-                {
-                    pesawat.CurrentFrame = 1;
-                }
-                else if (delta < 0)
-                {
-                    pesawat.CurrentFrame = 3;
-                }
-                else 
-                {
-                    pesawat.CurrentFrame = 0;
-                }
+                    if (delta > 3f)
+                        pesawat.CurrentFrame = 1;
+                    else if (delta < -3f)
+                        pesawat.CurrentFrame = 3;
 
-                pesawat.Translate(nextPosition);
+                    pesawat.Translate(nextPosition);
 
-                // Cek limit top-bottom
-                var topLimit = pesawat.Height / 2;
-                var bottomLimit = renderContext.GraphicsDevice.Viewport.Height - (pesawat.Height / 2);
+                    // Cek limit top-bottom
+                    var topLimit = pesawat.Height / 2;
+                    var bottomLimit = renderContext.GraphicsDevice.Viewport.Height - (pesawat.Height / 2);
 
-                if (pesawat.LocalPosition.Y <= topLimit)
-                {
-                    pesawat.Translate(pesawat.LocalPosition.X, topLimit);
-                    SceneManager.Vibrator.Start(TimeSpan.FromMilliseconds(500));
-                }
+                    if (pesawat.LocalPosition.Y <= topLimit)
+                    {
+                        pesawat.Translate(pesawat.LocalPosition.X, topLimit);
+                        SceneManager.Vibrator.Start(TimeSpan.FromMilliseconds(100));
+                    }
 
-                if (pesawat.LocalPosition.Y >= bottomLimit)
-                {
-                    pesawat.Translate(pesawat.LocalPosition.X, bottomLimit);
-                    SceneManager.Vibrator.Start(TimeSpan.FromMilliseconds(500));
+                    if (pesawat.LocalPosition.Y >= bottomLimit)
+                    {
+                        pesawat.Translate(pesawat.LocalPosition.X, bottomLimit);
+                        SceneManager.Vibrator.Start(TimeSpan.FromMilliseconds(100));
+                    }
                 }
             }
 
@@ -132,6 +127,8 @@ namespace WarpJam
         {
             pesawat.Translate(0, 240);
             CameraManager.getInstance().camera.Focus = pesawat;
+            CameraManager.getInstance().camera.IsIgnoreY = true;
+            CameraManager.getInstance().camera.SetScreenCenter(4, 2);
         }
     }
 }
