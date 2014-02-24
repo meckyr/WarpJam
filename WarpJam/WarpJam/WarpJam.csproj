@@ -82,6 +82,7 @@
     <Compile Include="Tools\ICamera2D.cs" />
     <Compile Include="Tools\IFocusable.cs" />
     <Compile Include="Tools\LineBatch.cs" />
+    <Compile Include="Tools\Primitives2D.cs" />
     <Compile Include="Tools\RenderContext.cs" />
     <Compile Include="Tools\SceneManager.cs" />
     <Compile Include="Tools\SpriteFonts.cs" />
