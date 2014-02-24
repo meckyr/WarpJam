@@ -73,7 +73,7 @@ namespace WarpJam.Tools
             {
                 if (songnumber == 1)
                     MediaPlayer.Play(mainmusic);
-                else
+                else if (songnumber == 2)
                     MediaPlayer.Play(levelmusic);
             }
             else

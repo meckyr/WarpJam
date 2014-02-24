@@ -49,20 +49,20 @@ namespace WarpJam.Tools
             pixel = contentManager.Load<Texture2D>("WhitePixel");
         }
 
-        public static void DrawLine(this SpriteBatch spriteBatch, Vector2 point1, Vector2 point2, Color color)
-        {
-            var distance = Vector2.Distance(point1, point2);
-            var angle = (float)Math.Atan2((point2.Y - point1.Y), (point2.X - point1.X));
+        //public static void DrawLine(this SpriteBatch spriteBatch, Vector2 point1, Vector2 point2, Color color)
+        //{
+        //    var distance = Vector2.Distance(point1, point2);
+        //    var angle = (float)Math.Atan2((point2.Y - point1.Y), (point2.X - point1.X));
 
-            spriteBatch.Draw(pixel, point1, null, color, angle, Vector2.Zero, new Vector2(distance, 1), SpriteEffects.None, 1.0f);
-        }
+        //    spriteBatch.Draw(pixel, point1, null, color, angle, Vector2.Zero, new Vector2(distance, 1), SpriteEffects.None, 1.0f);
+        //}
 
-        public static void Draw(this Rectangle rectangle, RenderContext renderContext, Color color)
-        {
-            renderContext.SpriteBatch.DrawLine(new Vector2(rectangle.Left, rectangle.Top), new Vector2(rectangle.Right, rectangle.Top), color);
-            renderContext.SpriteBatch.DrawLine(new Vector2(rectangle.Left, rectangle.Top), new Vector2(rectangle.Left, rectangle.Bottom), color);
-            renderContext.SpriteBatch.DrawLine(new Vector2(rectangle.Left, rectangle.Bottom), new Vector2(rectangle.Right, rectangle.Bottom), color);
-            renderContext.SpriteBatch.DrawLine(new Vector2(rectangle.Right, rectangle.Bottom), new Vector2(rectangle.Right, rectangle.Top), color);
-        }
+        //public static void Draw(this Rectangle rectangle, RenderContext renderContext, Color color)
+        //{
+        //    renderContext.SpriteBatch.DrawLine(new Vector2(rectangle.Left, rectangle.Top), new Vector2(rectangle.Right, rectangle.Top), color);
+        //    renderContext.SpriteBatch.DrawLine(new Vector2(rectangle.Left, rectangle.Top), new Vector2(rectangle.Left, rectangle.Bottom), color);
+        //    renderContext.SpriteBatch.DrawLine(new Vector2(rectangle.Left, rectangle.Bottom), new Vector2(rectangle.Right, rectangle.Bottom), color);
+        //    renderContext.SpriteBatch.DrawLine(new Vector2(rectangle.Right, rectangle.Bottom), new Vector2(rectangle.Right, rectangle.Top), color);
+        //}
     }
 }

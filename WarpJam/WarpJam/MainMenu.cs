@@ -25,13 +25,6 @@ namespace WarpJam
         private GameAnimatedSprite star1, star2, star3, star4, star5;
         private SpriteFont text;
 
-        // farseer
-        World world;
-        Body rectangle;
-        Body rectangle2;
-        Body rectangle3;
-        Texture2D rectangleSprite;
-
         // Pengecekan State
         private bool isOnMenu = true;
 
@@ -59,6 +52,7 @@ namespace WarpJam
             {
                 SceneManager.push.Play();
                 SceneManager.PlaySong(2);
+                MediaPlayer.Pause();
                 SceneManager.SetActiveScene("MainLevel");
                 SceneManager.ActiveScene.ResetScene();
             };
@@ -121,35 +115,10 @@ namespace WarpJam
             base.LoadContent(contentmanager);
 
             text = contentmanager.Load<SpriteFont>("font\\font");
-            
-            // farseer
-            if (world == null)
-                world = new World(new Vector2(0, 10f));
-            else
-                world.Clear();
-
-            rectangle = BodyFactory.CreateRectangle(world, 1f, 1f, 1.0f);
-            rectangle.BodyType = BodyType.Dynamic;
-            rectangle.Position = new Vector2(3.5f, 0);
-
-            rectangle.OnCollision += new OnCollisionEventHandler(rectangle_OnCollision);
-
-            rectangle2 = BodyFactory.CreateRectangle(world, 1f, 1f, 1.0f);
-            rectangle2.BodyType = BodyType.Static;
-            rectangle2.Position = new Vector2(2.7f, 2);
-
-            rectangle3 = BodyFactory.CreateRectangle(world, 1f, 1f, 1.0f);
-            rectangle3.BodyType = BodyType.Static;
-            rectangle3.Position = new Vector2(5.0f, 3);
-
-            rectangleSprite = contentmanager.Load<Texture2D>("kotak");
         }
 
         public override void Update(RenderContext rendercontext, ContentManager contentmanager)
         {
-            // farseer
-            world.Step(Math.Min((float)rendercontext.GameTime.ElapsedGameTime.TotalSeconds, (1f / 30f)));
-
             base.Update(rendercontext, contentmanager);
         }
 
@@ -162,13 +131,6 @@ namespace WarpJam
         public override void Draw(RenderContext rendercontext)
         {
             base.Draw(rendercontext);
-
-            rendercontext.SpriteBatch.Draw(rectangleSprite, ConvertUnits.ToDisplayUnits(rectangle.Position), null, Color.White,
-                rectangle.Rotation, new Vector2(rectangleSprite.Width / 2f, rectangleSprite.Height / 2f), 1f, SpriteEffects.None, 0f);
-            rendercontext.SpriteBatch.Draw(rectangleSprite, ConvertUnits.ToDisplayUnits(rectangle2.Position), null, Color.White,
-                rectangle2.Rotation, new Vector2(rectangleSprite.Width / 2f, rectangleSprite.Height / 2f), 1f, SpriteEffects.None, 0f);
-            rendercontext.SpriteBatch.Draw(rectangleSprite, ConvertUnits.ToDisplayUnits(rectangle3.Position), null, Color.White,
-                rectangle3.Rotation, new Vector2(rectangleSprite.Width / 2f, rectangleSprite.Height / 2f), 1f, SpriteEffects.None, 0f);
         }
 
         public override void ResetScene()
@@ -177,7 +139,6 @@ namespace WarpJam
             CameraManager.getInstance().camera.Focus = star1;
             CameraManager.getInstance().camera.IsIgnoreY = false;
             CameraManager.getInstance().camera.ResetScreenCenter();
-            rectangle.Position = new Vector2(3.5f, 0);
         }
 
         public override bool BackPressed()
