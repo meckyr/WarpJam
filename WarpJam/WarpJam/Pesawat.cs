@@ -65,6 +65,7 @@ namespace WarpJam
                 terrain.Add(new Vector2(6f, 1.8f));
                 terrain.Add(new Vector2(16.5f, 1.8f));
                 terrain.Add(new Vector2(24.5f, 3.5f));
+                terrain.Add(new Vector2(33f, 0.1f));
 
                 for (int i = 0; i < terrain.Count - 1; ++i)
                 {
@@ -78,6 +79,7 @@ namespace WarpJam
                 terrain.Add(new Vector2(6f, 3f));
                 terrain.Add(new Vector2(16.5f, 3f));
                 terrain.Add(new Vector2(24.5f, 4.7f));
+                terrain.Add(new Vector2(33f, 1.3f));
 
                 for (int i = 0; i < terrain.Count - 1; ++i)
                 {
@@ -100,8 +102,6 @@ namespace WarpJam
             rectangle.IgnoreGravity = true;
 
             pesawat.Translate(ConvertUnits.ToDisplayUnits(rectangle.Position));
-            rectangle.LinearVelocity = new Vector2(1, 0);
-            rectangle.LinearDamping = 0f;
 
             rectangle.OnCollision += new OnCollisionEventHandler(rectangle_OnCollision);
         }
@@ -130,9 +130,8 @@ namespace WarpJam
             objectSpeed *= (float)renderContext.GameTime.ElapsedGameTime.TotalSeconds;
 
             //rectangle.ResetDynamics();
-            //rectangle.ApplyForce(new Vector2(90, 20f));
-            //var objectPosX = ConvertUnits.ToDisplayUnits(rectangle.Position.X) + objectSpeed;
-            //rectangle.Position = new Vector2(ConvertUnits.ToSimUnits(objectPosX), rectangle.Position.Y);
+            var objectPosX = ConvertUnits.ToDisplayUnits(rectangle.Position.X) + objectSpeed;
+            rectangle.Position = new Vector2(ConvertUnits.ToSimUnits(objectPosX), rectangle.Position.Y);
             pesawat.Translate(ConvertUnits.ToDisplayUnits(rectangle.Position));
 
             // check gesture
