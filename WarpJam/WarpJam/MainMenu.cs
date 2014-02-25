@@ -131,6 +131,9 @@ namespace WarpJam
         public override void Draw(RenderContext rendercontext)
         {
             base.Draw(rendercontext);
+
+            rendercontext.SpriteBatch.DrawString(text, "Music", new Vector2(1000, 100), Color.White);
+            rendercontext.SpriteBatch.DrawString(text, "SFX", new Vector2(1000, 300), Color.White);
         }
 
         public override void ResetScene()

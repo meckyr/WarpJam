@@ -14,7 +14,6 @@ namespace WarpJam.Tools
         public GraphicsDevice GraphicsDevice { get; set; }
         public GameTime GameTime { get; set; }
         public TouchCollection TouchPanelState { get; set; }
-        public LineBatch LineBatch { get; set; }
 
         public float GameSpeed { get; set; }
         public float InitialGameSpeed { get; set; }

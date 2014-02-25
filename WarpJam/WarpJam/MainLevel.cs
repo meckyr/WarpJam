@@ -60,8 +60,7 @@ namespace WarpJam
                 if (delay <= 0)
                 {
                     gunfire.Play();
-                    sux.CanDraw = true;
-                    sux.PlayAnimation(false);
+                    SpawnScore();
                     pesawat.ShieldUp();
                 }
             };
@@ -73,31 +72,44 @@ namespace WarpJam
             base.Initialize();
         }
 
+        public void SpawnScore()
+        {
+            var oldPos = leet.LocalPosition;
+            leet.Translate(pesawat.Sprite.LocalPosition - new Vector2(-120, 80));
+            var newPos = leet.LocalPosition;
+
+            if (oldPos != newPos)
+            {
+                leet.CanDraw = true;
+                leet.PlayAnimation(false);
+            }
+        }
+
         public void InitiateScore()
         {
-            sux = new GameAnimatedSprite("level\\sux", 5, 15, new Point(200, 70), 1);
+            sux = new GameAnimatedSprite("level\\sux", 5, 40, new Point(200, 70), 1);
             sux.Origin = new Vector2(100, 35);
             sux.Translate(500, 200);
             sux.CanDraw = false;
-            AddHUDObject(sux);
+            AddSceneObject(sux);
 
-            meh = new GameAnimatedSprite("level\\meh", 5, 15, new Point(200, 70), 1);
+            meh = new GameAnimatedSprite("level\\meh", 5, 40, new Point(200, 70), 1);
             meh.Origin = new Vector2(100, 35);
             meh.Translate(500, 200);
             meh.CanDraw = false;
-            AddHUDObject(meh);
+            AddSceneObject(meh);
 
-            gr8 = new GameAnimatedSprite("level\\gr8", 5, 15, new Point(200, 70), 1);
+            gr8 = new GameAnimatedSprite("level\\gr8", 5, 40, new Point(200, 70), 1);
             gr8.Origin = new Vector2(100, 35);
             gr8.Translate(500, 200);
             gr8.CanDraw = false;
-            AddHUDObject(gr8);
+            AddSceneObject(gr8);
 
-            leet = new GameAnimatedSprite("level\\leet", 5, 15, new Point(200, 70), 1);
+            leet = new GameAnimatedSprite("level\\leet", 5, 40, new Point(200, 70), 1);
             leet.Origin = new Vector2(100, 35);
             leet.Translate(500, 200);
             leet.CanDraw = false;
-            AddHUDObject(leet);
+            AddSceneObject(leet);
         }
 
         public void InitiateStar()
@@ -170,6 +182,11 @@ namespace WarpJam
                 gr8.CanDraw = false;
             if (!leet.IsPlaying)
                 leet.CanDraw = false;
+
+            sux.Translate(pesawat.Sprite.LocalPosition - new Vector2(-120, 80));
+            meh.Translate(pesawat.Sprite.LocalPosition - new Vector2(-120, 80));
+            gr8.Translate(pesawat.Sprite.LocalPosition - new Vector2(-120, 80));
+            leet.Translate(pesawat.Sprite.LocalPosition - new Vector2(-120, 80));
         }
 
         public override void Draw(RenderContext rendercontext)
@@ -177,11 +194,6 @@ namespace WarpJam
             base.Draw(rendercontext);
 
             DrawPath(rendercontext);
-            //farseer
-            //for (int i = 0; i < ground.FixtureList.Count; ++i)
-            //{
-            //    rendercontext.LineBatch.DrawLineShape(ground.FixtureList[i].Shape, Color.Black);
-            //}
         }
 
         public void DrawPath(RenderContext rendercontext)
@@ -290,6 +302,27 @@ namespace WarpJam
 
             rendercontext.SpriteBatch.DrawLine(new Vector2(8750f, 10f), new Vector2(8850f, 350f), Color.White, 2);
             rendercontext.SpriteBatch.DrawLine(new Vector2(8650f, 130f), new Vector2(8750f, 470f), Color.White, 2);
+
+            rendercontext.SpriteBatch.DrawLine(new Vector2(8850f, 350f), new Vector2(9100f, 350f), Color.White, 2);
+            rendercontext.SpriteBatch.DrawLine(new Vector2(8750f, 470f), new Vector2(9100f, 470f), Color.White, 2);
+
+            rendercontext.SpriteBatch.DrawLine(new Vector2(9100f, 350f), new Vector2(9500f, 150f), Color.White, 2);
+            rendercontext.SpriteBatch.DrawLine(new Vector2(9100f, 470f), new Vector2(9500f, 270f), Color.White, 2);
+
+            rendercontext.SpriteBatch.DrawLine(new Vector2(9500f, 150f), new Vector2(9950f, 300f), Color.White, 2);
+            rendercontext.SpriteBatch.DrawLine(new Vector2(9500f, 270f), new Vector2(9950f, 420f), Color.White, 2);
+
+            rendercontext.SpriteBatch.DrawLine(new Vector2(9950f, 300f), new Vector2(10350f, 100f), Color.White, 2);
+            rendercontext.SpriteBatch.DrawLine(new Vector2(9950f, 420f), new Vector2(10350f, 220f), Color.White, 2);
+
+            rendercontext.SpriteBatch.DrawLine(new Vector2(10350f, 100f), new Vector2(10650f, 220f), Color.White, 2);
+            rendercontext.SpriteBatch.DrawLine(new Vector2(10350f, 220f), new Vector2(10650f, 340f), Color.White, 2);
+
+            rendercontext.SpriteBatch.DrawLine(new Vector2(10650f, 220f), new Vector2(10750f, 10f), Color.White, 2);
+            rendercontext.SpriteBatch.DrawLine(new Vector2(10650f, 340f), new Vector2(10750f, 340f), Color.White, 2);
+
+            rendercontext.SpriteBatch.DrawLine(new Vector2(10750f, 10f), new Vector2(10870f, 10f), Color.White, 2);
+            rendercontext.SpriteBatch.DrawLine(new Vector2(10750f, 340f), new Vector2(10870f, 130f), Color.White, 2);
         }
 
         public override void ResetScene()
