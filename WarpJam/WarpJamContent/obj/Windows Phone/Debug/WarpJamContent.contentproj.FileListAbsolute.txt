@@ -2,3 +2,4 @@ E:\Project\WarpJam\WarpJam\WarpJamContent\obj\Windows Phone\Debug\WarpJamContent
 E:\Project\Git\WarpJam\WarpJam\WarpJamContent\obj\Windows Phone\Debug\WarpJamContent.contentprojResolveAssemblyReference.cache
 D:\Imagine\WarpJam\WarpJam\WarpJamContent\obj\Windows Phone\Debug\WarpJamContent.contentprojResolveAssemblyReference.cache
 E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJamContent\obj\Windows Phone\Debug\WarpJamContent.contentprojResolveAssemblyReference.cache
+D:\icup\WarpJam\WarpJam\WarpJamContent\obj\Windows Phone\Debug\WarpJamContent.contentprojResolveAssemblyReference.cache

@@ -69,9 +69,10 @@ namespace WarpJam
             // Add semua scene yang ada
             SceneManager.AddGameScene(new MainMenu());
             SceneManager.AddGameScene(new MainLevel());
+            SceneManager.AddGameScene(new PilihLevel());
 
             // Set Scene pertama
-            SceneManager.SetActiveScene("MainMenu");
+            SceneManager.SetActiveScene("PilihLevel");
             SceneManager.Initialize();
 
             base.Initialize();

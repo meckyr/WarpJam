@@ -17,7 +17,7 @@ namespace WarpJam.Tools
     /// </summary>
     public class Camera2D : GameComponent, ICamera2D
     {
-        private Vector2 _position;
+        public Vector2 _position;
         protected float _viewportHeight;
         protected float _viewportWidth;
 

@@ -69,6 +69,7 @@
     <Compile Include="MainLevel.cs" />
     <Compile Include="MainMenu.cs" />
     <Compile Include="Pesawat.cs" />
+    <Compile Include="PilihLevel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tools\Background.cs" />
     <Compile Include="Tools\Camera2D.cs" />
@@ -82,6 +83,7 @@
     <Compile Include="Tools\ICamera2D.cs" />
     <Compile Include="Tools\IFocusable.cs" />
     <Compile Include="Tools\LineBatch.cs" />
+    <Compile Include="Tools\Primitives2D.cs" />
     <Compile Include="Tools\RenderContext.cs" />
     <Compile Include="Tools\SceneManager.cs" />
     <Compile Include="Tools\SpriteFonts.cs" />
@@ -104,7 +106,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\..\File ECKY\Imagine Cup\Farseer Physics Engine 3.5\Farseer Physics WP7.csproj">
+    <ProjectReference Include="..\..\Farseer Physics Engine 3.5\Farseer Physics WP7.csproj">
       <Project>{4DA8DC0C-EC1E-4C31-8B00-9C0DB87C5D0A}</Project>
       <Name>Farseer Physics WP7</Name>
     </ProjectReference>

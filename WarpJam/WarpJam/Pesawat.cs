@@ -100,6 +100,8 @@ namespace WarpJam
             rectangle.IgnoreGravity = true;
 
             pesawat.Translate(ConvertUnits.ToDisplayUnits(rectangle.Position));
+            rectangle.LinearVelocity = new Vector2(1, 0);
+            rectangle.LinearDamping = 0f;
 
             rectangle.OnCollision += new OnCollisionEventHandler(rectangle_OnCollision);
         }
@@ -129,8 +131,8 @@ namespace WarpJam
 
             //rectangle.ResetDynamics();
             //rectangle.ApplyForce(new Vector2(90, 20f));
-            var objectPosX = ConvertUnits.ToDisplayUnits(rectangle.Position.X) + objectSpeed;
-            rectangle.Position = new Vector2(ConvertUnits.ToSimUnits(objectPosX), rectangle.Position.Y);
+            //var objectPosX = ConvertUnits.ToDisplayUnits(rectangle.Position.X) + objectSpeed;
+            //rectangle.Position = new Vector2(ConvertUnits.ToSimUnits(objectPosX), rectangle.Position.Y);
             pesawat.Translate(ConvertUnits.ToDisplayUnits(rectangle.Position));
 
             // check gesture
