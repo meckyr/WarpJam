@@ -12,7 +12,7 @@ namespace WarpJam
     class TitleScreen : GameScene 
     {
         private GameSprite bg;
-        private GameAnimatedSprite logo, star1, star2, star3, star4, star5;
+        private GameAnimatedSprite logo, text, star1, star2, star3, star4, star5, star6;
 
         private const double Delay = 2.5f;
         private double delay = Delay;
@@ -44,7 +44,7 @@ namespace WarpJam
 
             star4 = new GameAnimatedSprite("menu\\star", 10, 65, new Point(55, 58));
             star4.Color = Color.Cyan;
-            star4.Translate(400, 400);
+            star4.Translate(600, 400);
             star4.PlayAnimation(true);
             AddSceneObject(star4);
 
@@ -54,6 +54,13 @@ namespace WarpJam
             star5.Translate(500, 90);
             star5.PlayAnimation(true);
             AddSceneObject(star5);
+
+            star6 = new GameAnimatedSprite("menu\\bintang", 8, 40, new Point(121, 26), 1);
+            star6.Color = Color.Cyan;
+            star6.Translate(100, 70);
+            star6.Rotate(45);
+            star6.PlayAnimation(true);
+            AddSceneObject(star6);
         }
 
         public override void Initialize()
@@ -66,8 +73,13 @@ namespace WarpJam
 
             logo = new GameAnimatedSprite("title\\logo", 4, 120, new Point(650, 250), 2);
             logo.PlayAnimation(false);
-            logo.Translate(75, 115);
+            logo.Translate(75, 100);
             AddSceneObject(logo);
+
+            text = new GameAnimatedSprite("title\\text", 4, 100, new Point(250, 100), 1);
+            text.PlayAnimation(true);
+            text.Translate(290, 350);
+            AddSceneObject(text);
 
             base.Initialize();
         }
@@ -109,6 +121,7 @@ namespace WarpJam
 
         public override bool BackPressed()
         {
+            SceneManager.push.Play();
             return true;
         }
     }

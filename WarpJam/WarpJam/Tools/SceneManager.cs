@@ -21,6 +21,7 @@ namespace WarpJam.Tools
         
         // kumpulan soundeffect
         public static SoundEffect push { get; private set; }
+        public static SoundEffect whoosh { get; private set; }
         
         // kumpulan music
         public static Song mainmusic;
@@ -72,9 +73,15 @@ namespace WarpJam.Tools
             if (IsMusicPlaying)
             {
                 if (songnumber == 1)
+                {
                     MediaPlayer.Play(mainmusic);
+                    MediaPlayer.IsRepeating = true;
+                }
                 else if (songnumber == 2)
+                {
                     MediaPlayer.Play(levelmusic);
+                    MediaPlayer.IsRepeating = false;
+                }
             }
             else
             {
@@ -86,11 +93,15 @@ namespace WarpJam.Tools
                     if (Choice == MessageBoxResult.OK)
                     {
                         if (songnumber == 1)
+                        {
                             MediaPlayer.Play(mainmusic);
-                        else
+                            MediaPlayer.IsRepeating = true;
+                        }
+                        else if (songnumber == 2)
+                        {
                             MediaPlayer.Play(levelmusic);
-
-                        MediaPlayer.IsRepeating = true;
+                            MediaPlayer.IsRepeating = false;
+                        }
                         IsMusicPlaying = true;
                     }
 
@@ -98,11 +109,15 @@ namespace WarpJam.Tools
                 else
                 {
                     if (songnumber == 1)
+                    {
                         MediaPlayer.Play(mainmusic);
-                    else
+                        MediaPlayer.IsRepeating = true;
+                    }
+                    else if (songnumber == 2)
+                    {
                         MediaPlayer.Play(levelmusic);
-
-                    MediaPlayer.IsRepeating = true;
+                        MediaPlayer.IsRepeating = false;
+                    }
                     IsMusicPlaying = true;
                 }
             }
@@ -111,8 +126,9 @@ namespace WarpJam.Tools
         public static void LoadContent(ContentManager contentmanager)
         {
             push = contentmanager.Load<SoundEffect>("sfx\\button");
-            mainmusic = contentmanager.Load<Song>("song\\mainmusic");
-            levelmusic = contentmanager.Load<Song>("song\\levelmusic");
+            whoosh = contentmanager.Load<SoundEffect>("sfx\\whoosh");
+            mainmusic = contentmanager.Load<Song>("song\\mainmusic2");
+            levelmusic = contentmanager.Load<Song>("song\\levelmusic2");
 
             // mainkan musik
             PlaySong(1);

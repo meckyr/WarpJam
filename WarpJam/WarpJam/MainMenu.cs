@@ -22,7 +22,7 @@ namespace WarpJam
     {
         private GameButton play, setting, score;
         private GameSprite bg;
-        private GameAnimatedSprite star1, star2, star3, star4, star5;
+        private GameAnimatedSprite star1, star2, star3, star4, star5, setting_a;
         private SpriteFont text;
 
         // Pengecekan State
@@ -59,20 +59,38 @@ namespace WarpJam
             AddSceneObject(play);
 
             setting = new GameButton("menu\\settingbutton", true);
-            setting.Translate(100, 220);
+            setting.Translate(120, 250);
+            setting.CanDraw = false;
             setting.OnClick += () =>
             {
-                SceneManager.push.Play();
+                SceneManager.whoosh.Play();
                 isOnMenu = false;
                 star1.Translate(1200, 240);
+                setting_a.CanDraw = true;
+                setting.CanDraw = false;
+            };
+            setting.OnEnter += () =>
+            {
+                setting_a.CanDraw = false;
+                setting.CanDraw = true;
+            };
+            setting.OnLeave += () =>
+            {
+                setting_a.CanDraw = true;
+                setting.CanDraw = false;
             };
             AddSceneObject(setting);
 
+            setting_a = new GameAnimatedSprite("menu\\settingbuttonanimated", 4, 100, new Point(250, 100), 1);
+            setting_a.Translate(120, 250);
+            setting_a.PlayAnimation(true);
+            AddSceneObject(setting_a);
+
             score = new GameButton("menu\\scorebutton", true);
-            score.Translate(100, 340);
+            score.Translate(120, 340);
             score.OnClick += () =>
             {
-                SceneManager.push.Play();
+                SceneManager.whoosh.Play();
                 isOnMenu = false;
                 star1.Translate(400, 720);
             };
@@ -147,11 +165,15 @@ namespace WarpJam
         public override bool BackPressed()
         {
             if (isOnMenu)
+            {
+                SceneManager.push.Play();
                 return true;
+            }
             else
             {
                 isOnMenu = true;
                 star1.Translate(400, 240);
+                SceneManager.whoosh.Play();
                 return false;
             }
         }

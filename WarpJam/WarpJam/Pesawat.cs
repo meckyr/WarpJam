@@ -198,17 +198,17 @@ namespace WarpJam
                     {
                         // animasi
                         var oldPos = ConvertUnits.ToDisplayUnits(rectangle.Position.Y);
-                        Vector2 nextPosition = ConvertUnits.ToDisplayUnits(rectangle.Position) + (dragDelta * 1.2f);
+                        Vector2 nextPosition = ConvertUnits.ToDisplayUnits(rectangle.Position) + (dragDelta * 1.5f);
                         var newPos = nextPosition.Y;
 
                         var delta = newPos - oldPos;
 
-                        if (delta > 2.5f)
+                        if (delta > 3f)
                         {
                             pesawat.CurrentFrame = 1;
                             SetExhaust(3);
                         }
-                        else if (delta < -2.5f)
+                        else if (delta < -3f)
                         {
                             pesawat.CurrentFrame = 3;
                             SetExhaust(2);
