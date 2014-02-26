@@ -22,6 +22,9 @@ namespace WarpJam.Tools
         // kumpulan soundeffect
         public static SoundEffect push { get; private set; }
         public static SoundEffect whoosh { get; private set; }
+        public static SoundEffect pulse { get; private set; }
+        public static SoundEffect pulse2 { get; private set; }
+        public static SoundEffect sux { get; private set; }
         
         // kumpulan music
         public static Song mainmusic;
@@ -36,6 +39,9 @@ namespace WarpJam.Tools
         {
             GameScenes = new List<GameScene>();
             RenderContext = new RenderContext();
+
+            MediaPlayer.Volume = 0.1f;
+            SoundEffect.MasterVolume = 1.0f;
         }
 
         public static void AddGameScene(GameScene gamescene)
@@ -127,6 +133,10 @@ namespace WarpJam.Tools
         {
             push = contentmanager.Load<SoundEffect>("sfx\\button");
             whoosh = contentmanager.Load<SoundEffect>("sfx\\whoosh");
+            pulse = contentmanager.Load<SoundEffect>("sfx\\pulse");
+            pulse2 = contentmanager.Load<SoundEffect>("sfx\\pulse2");
+            sux = contentmanager.Load<SoundEffect>("sfx\\sux");
+
             mainmusic = contentmanager.Load<Song>("song\\mainmusic2");
             levelmusic = contentmanager.Load<Song>("song\\levelmusic2");
 

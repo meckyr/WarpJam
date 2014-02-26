@@ -49,6 +49,7 @@ namespace WarpJam
 
             exhaustmiddle = new GameAnimatedSprite("level\\exhaustmiddle", 4, 80, new Point(135, 60));
             exhaustmiddle.Origin = new Vector2(95, 30);
+            exhaustmiddle.CanDraw = false;
             exhaustmiddle.PlayAnimation(true);
 
             exhausttop = new GameAnimatedSprite("level\\exhausttop", 4, 80, new Point(135, 60));
@@ -138,23 +139,26 @@ namespace WarpJam
 
         public void SetExhaust(int num)
         {
-            switch (num)
+            if (CurrentState == StatePesawat.Ready)
             {
-                case 1:
-                    exhaustmiddle.CanDraw = true;
-                    exhaustbottom.CanDraw = false;
-                    exhausttop.CanDraw = false;
-                    break;
-                case 2:
-                    exhaustmiddle.CanDraw = false;
-                    exhaustbottom.CanDraw = false;
-                    exhausttop.CanDraw = true;
-                    break;
-                case 3:
-                    exhaustmiddle.CanDraw = false;
-                    exhaustbottom.CanDraw = true;
-                    exhausttop.CanDraw = false;
-                    break;
+                switch (num)
+                {
+                    case 1:
+                        exhaustmiddle.CanDraw = true;
+                        exhaustbottom.CanDraw = false;
+                        exhausttop.CanDraw = false;
+                        break;
+                    case 2:
+                        exhaustmiddle.CanDraw = false;
+                        exhaustbottom.CanDraw = false;
+                        exhausttop.CanDraw = true;
+                        break;
+                    case 3:
+                        exhaustmiddle.CanDraw = false;
+                        exhaustbottom.CanDraw = true;
+                        exhausttop.CanDraw = false;
+                        break;
+                }
             }
         }
 
@@ -194,28 +198,31 @@ namespace WarpJam
                             break;
                     }
 
-                    if (CurrentState == StatePesawat.Ready)
+                    if (dragPos.X <= 400)
                     {
-                        // animasi
-                        var oldPos = ConvertUnits.ToDisplayUnits(rectangle.Position.Y);
-                        Vector2 nextPosition = ConvertUnits.ToDisplayUnits(rectangle.Position) + (dragDelta * 1.5f);
-                        var newPos = nextPosition.Y;
-
-                        var delta = newPos - oldPos;
-
-                        if (delta > 3f)
+                        if (CurrentState == StatePesawat.Ready)
                         {
-                            pesawat.CurrentFrame = 1;
-                            SetExhaust(3);
-                        }
-                        else if (delta < -3f)
-                        {
-                            pesawat.CurrentFrame = 3;
-                            SetExhaust(2);
-                        }
+                            // animasi
+                            var oldPos = ConvertUnits.ToDisplayUnits(rectangle.Position.Y);
+                            Vector2 nextPosition = ConvertUnits.ToDisplayUnits(rectangle.Position) + (dragDelta * 1.5f);
+                            var newPos = nextPosition.Y;
 
-                        rectangle.Position = ConvertUnits.ToSimUnits(nextPosition);
-                        pesawat.Translate(ConvertUnits.ToDisplayUnits(rectangle.Position));
+                            var delta = newPos - oldPos;
+
+                            if (delta > 3f)
+                            {
+                                pesawat.CurrentFrame = 1;
+                                SetExhaust(3);
+                            }
+                            else if (delta < -3f)
+                            {
+                                pesawat.CurrentFrame = 3;
+                                SetExhaust(2);
+                            }
+
+                            rectangle.Position = ConvertUnits.ToSimUnits(nextPosition);
+                            pesawat.Translate(ConvertUnits.ToDisplayUnits(rectangle.Position));
+                        }
                     }
                 }
             }
@@ -236,6 +243,7 @@ namespace WarpJam
         {
             InitiatePhysics();
             shield.CanDraw = false;
+            exhaustmiddle.CanDraw = false;
             CameraManager.getInstance().camera.Focus = pesawat;
             CameraManager.getInstance().camera.IsIgnoreY = true;
             CameraManager.getInstance().camera.SetScreenCenter(4, 2);
