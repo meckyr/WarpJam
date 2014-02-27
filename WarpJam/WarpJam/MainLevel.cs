@@ -22,6 +22,7 @@ namespace WarpJam
     {
         private Background backdrop;
         private Pesawat pesawat;
+        private List<Obstacle> obstacle;
         private GameButton fire;
         private SpriteFonts text;
         private GameAnimatedSprite sux, meh, gr8, leet;
@@ -44,6 +45,8 @@ namespace WarpJam
             backdrop = new Background();
             AddHUDObject(backdrop);
 
+            obstacle = new List<Obstacle>();
+
             text = new SpriteFonts("font\\font");
             text.Translate(600, 50);
             AddHUDObject(text);
@@ -57,13 +60,15 @@ namespace WarpJam
             {
                 if (pesawat.CurrentState == Pesawat.StatePesawat.Ready)
                 {
-                    SceneManager.sux.Play();
                     SceneManager.Vibrator.Start(TimeSpan.FromMilliseconds(100));
-                    SpawnScore();
                     pesawat.ShieldUp();
+                    SpawnScore(ObstacleCheck());
                 }
             };
             AddHUDObject(fire);
+
+            InitiateEnemy();
+            
 
             pesawat = new Pesawat();
             AddSceneObject(pesawat);
@@ -73,10 +78,69 @@ namespace WarpJam
             base.Initialize();
         }
 
-        public void SpawnScore()
+        public int ObstacleCheck()
         {
-            leet.CanDraw = true;
-            leet.PlayAnimation(false);
+            int num = 0;
+
+            foreach (Obstacle ob in obstacle)
+            {
+                num = ob.CheckCollision();
+
+                if (num != 0)
+                    break;
+            }
+
+            return num;
+        }
+
+        public void InitiateEnemy()
+        {
+            Obstacle obstacle1 = new Obstacle(new Vector2(2425, 400), TimeSpan.FromSeconds(6.6));
+            obstacle.Add(obstacle1);
+            AddSceneObject(obstacle1);
+
+            Obstacle obstacle2 = new Obstacle(new Vector2(2600, 400), TimeSpan.FromSeconds(10));
+            obstacle.Add(obstacle2);
+            AddSceneObject(obstacle2);
+
+            Obstacle obstacle3 = new Obstacle(new Vector2(3000, 400), TimeSpan.FromSeconds(14));
+            obstacle.Add(obstacle3);
+            AddSceneObject(obstacle3);
+
+            Obstacle obstacle4 = new Obstacle(new Vector2(4000, 400), TimeSpan.FromSeconds(15));
+            obstacle.Add(obstacle4);
+            AddSceneObject(obstacle4);
+
+            Obstacle obstacle5 = new Obstacle(new Vector2(6000, 400), TimeSpan.FromSeconds(18));
+            obstacle.Add(obstacle5);
+            AddSceneObject(obstacle5);
+        }
+
+        public void SpawnScore(int i)
+        {
+            switch (i)
+            {
+                case 0:
+                    SceneManager.sux.Play();
+                    sux.CanDraw = true;
+                    sux.PlayAnimation(false);
+                    break;
+                case 1:
+                    SceneManager.pulse.Play();
+                    leet.CanDraw = true;
+                    leet.PlayAnimation(false);
+                    break;
+                case 2:
+                    SceneManager.pulse.Play();
+                    meh.CanDraw = true;
+                    meh.PlayAnimation(false);
+                    break;
+                case 3:
+                    SceneManager.pulse.Play();
+                    gr8.CanDraw = true;
+                    gr8.PlayAnimation(false);
+                    break;
+            }
         }
 
         public void InitiateScore()
@@ -500,6 +564,9 @@ namespace WarpJam
             delay = Delay;
             pesawat.Reset();
             pesawat.CurrentState = Pesawat.StatePesawat.Normal;
+
+            foreach (Obstacle ob in obstacle)
+                ob.Reset();
         }
     }
 }

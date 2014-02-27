@@ -180,7 +180,6 @@ namespace WarpJam
             var objectSpeed = renderContext.GameSpeed * Acceleration;
             objectSpeed *= (float)renderContext.GameTime.ElapsedGameTime.TotalSeconds;
 
-            //rectangle.ResetDynamics();
             var objectPosX = ConvertUnits.ToDisplayUnits(rectangle.Position.X) + objectSpeed;
             rectangle.Position = new Vector2(ConvertUnits.ToSimUnits(objectPosX), rectangle.Position.Y);
             pesawat.Translate(ConvertUnits.ToDisplayUnits(rectangle.Position));

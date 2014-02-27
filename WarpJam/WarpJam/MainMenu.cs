@@ -26,7 +26,7 @@ namespace WarpJam
         private SpriteFont text;
 
         // pesawat
-        private const double ShipAnimationDelay = 3;
+        private const double ShipAnimationDelay = 1;
         private double delay = ShipAnimationDelay;
         private int acceleration = 1;
 
