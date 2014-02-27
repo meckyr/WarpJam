@@ -59,7 +59,7 @@
     <Reference Include="Microsoft.Xna.Framework.Input.Touch" />
     <Reference Include="mscorlib" />
     <Reference Include="ProjectMercury">
-      <HintPath>..\..\..\Mercury.4.0_WindowsPhone\ProjectMercury.dll</HintPath>
+      <HintPath>..\..\Mercury.4.0_WindowsPhone\ProjectMercury.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Windows, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e, processorArchitecture=MSIL" />
