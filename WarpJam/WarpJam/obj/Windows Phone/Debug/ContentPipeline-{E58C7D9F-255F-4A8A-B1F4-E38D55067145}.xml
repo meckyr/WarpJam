@@ -18,7 +18,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>D:\icup\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\sfx\button.xnb</Output>
-      <Time>2014-02-24T18:27:23.8389353+07:00</Time>
+      <Time>2014-02-27T15:28:18.9004096+07:00</Time>
     </Item>
     <Item>
       <Source>song\mainmusic.mp3</Source>
@@ -31,22 +31,13 @@
       <Time>2014-02-24T18:27:23.967949+07:00</Time>
     </Item>
     <Item>
-      <Source>sfx\gunfire.mp3</Source>
-      <Name>sfx\gunfire</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>D:\icup\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\sfx\gunfire.xnb</Output>
-      <Time>2014-02-24T18:27:23.8459364+07:00</Time>
-    </Item>
-    <Item>
       <Source>menu\playbutton.png</Source>
       <Name>menu\playbutton</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\icup\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\menu\playbutton.xnb</Output>
-      <Time>2014-02-24T18:27:23.7979322+07:00</Time>
+      <Time>2014-02-27T15:28:18.8794022+07:00</Time>
     </Item>
     <Item>
       <Source>menu\hero.png</Source>
@@ -82,7 +73,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\icup\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\menu\settingbutton.xnb</Output>
-      <Time>2014-02-24T18:27:23.8029332+07:00</Time>
+      <Time>2014-02-27T15:28:18.8864162+07:00</Time>
     </Item>
     <Item>
       <Source>menu\scorebutton.png</Source>
@@ -91,7 +82,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\icup\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\menu\scorebutton.xnb</Output>
-      <Time>2014-02-24T18:27:23.8009316+07:00</Time>
+      <Time>2014-02-27T15:28:18.8824167+07:00</Time>
     </Item>
     <Item>
       <Source>menu\background.jpg</Source>
@@ -100,7 +91,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\icup\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\menu\background.xnb</Output>
-      <Time>2014-02-25T12:19:11.5658447+07:00</Time>
+      <Time>2014-02-27T15:28:18.8774351+07:00</Time>
     </Item>
     <Item>
       <Source>menu\star.png</Source>
@@ -236,6 +227,161 @@
       <Options>None</Options>
       <Output>D:\icup\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\particles\Demo1.xnb</Output>
       <Time>2014-02-27T09:25:37.8465214+07:00</Time>
+    </Item>
+    <Item>
+      <Source>song\levelmusic2.mp3</Source>
+      <Name>song\levelmusic2</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\icup\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\song\levelmusic2.xnb</Output>
+      <Extra>D:\icup\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\song\levelmusic2.wma</Extra>
+      <Time>2014-02-27T15:28:18.9834483+07:00</Time>
+    </Item>
+    <Item>
+      <Source>song\mainmusic2.mp3</Source>
+      <Name>song\mainmusic2</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\icup\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\song\mainmusic2.xnb</Output>
+      <Extra>D:\icup\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\song\mainmusic2.wma</Extra>
+      <Time>2014-02-27T15:28:19.0484302+07:00</Time>
+    </Item>
+    <Item>
+      <Source>sfx\whoosh.mp3</Source>
+      <Name>sfx\whoosh</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\icup\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\sfx\whoosh.xnb</Output>
+      <Time>2014-02-27T15:28:18.9214425+07:00</Time>
+    </Item>
+    <Item>
+      <Source>sfx\pulse.mp3</Source>
+      <Name>sfx\pulse</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\icup\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\sfx\pulse.xnb</Output>
+      <Time>2014-02-27T15:28:18.9065047+07:00</Time>
+    </Item>
+    <Item>
+      <Source>sfx\pulse2.mp3</Source>
+      <Name>sfx\pulse2</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\icup\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\sfx\pulse2.xnb</Output>
+      <Time>2014-02-27T15:28:18.9114204+07:00</Time>
+    </Item>
+    <Item>
+      <Source>sfx\sux.mp3</Source>
+      <Name>sfx\sux</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\icup\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\sfx\sux.xnb</Output>
+      <Time>2014-02-27T15:28:18.9154209+07:00</Time>
+    </Item>
+    <Item>
+      <Source>level\exhaustmiddle.png</Source>
+      <Name>level\exhaustmiddle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\icup\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\level\exhaustmiddle.xnb</Output>
+      <Time>2014-02-27T15:28:18.8674011+07:00</Time>
+    </Item>
+    <Item>
+      <Source>level\exhaustbottom.png</Source>
+      <Name>level\exhaustbottom</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\icup\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\level\exhaustbottom.xnb</Output>
+      <Time>2014-02-27T15:28:18.848433+07:00</Time>
+    </Item>
+    <Item>
+      <Source>level\exhausttop.png</Source>
+      <Name>level\exhausttop</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\icup\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\level\exhausttop.xnb</Output>
+      <Time>2014-02-27T15:28:18.869434+07:00</Time>
+    </Item>
+    <Item>
+      <Source>title\logo.png</Source>
+      <Name>title\logo</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\icup\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\title\logo.xnb</Output>
+      <Time>2014-02-27T15:28:19.0564264+07:00</Time>
+    </Item>
+    <Item>
+      <Source>title\text.png</Source>
+      <Name>title\text</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\icup\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\title\text.xnb</Output>
+      <Time>2014-02-27T15:28:19.0584405+07:00</Time>
+    </Item>
+    <Item>
+      <Source>menu\settingbuttonanimated.png</Source>
+      <Name>menu\settingbuttonanimated</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\icup\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\menu\settingbuttonanimated.xnb</Output>
+      <Time>2014-02-27T15:28:18.8884307+07:00</Time>
+    </Item>
+    <Item>
+      <Source>menu\scorebuttonanimated.png</Source>
+      <Name>menu\scorebuttonanimated</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\icup\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\menu\scorebuttonanimated.xnb</Output>
+      <Time>2014-02-27T15:28:18.8844302+07:00</Time>
+    </Item>
+    <Item>
+      <Source>menu\playbuttonanimated.png</Source>
+      <Name>menu\playbuttonanimated</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\icup\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\menu\playbuttonanimated.xnb</Output>
+      <Time>2014-02-27T15:28:18.8814383+07:00</Time>
+    </Item>
+    <Item>
+      <Source>title\background.png</Source>
+      <Name>title\background</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\icup\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\title\background.xnb</Output>
+      <Time>2014-02-27T15:28:19.0524248+07:00</Time>
+    </Item>
+    <Item>
+      <Source>menu\ship2.png</Source>
+      <Name>menu\ship2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\icup\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\menu\ship2.xnb</Output>
+      <Time>2014-02-27T15:28:18.8954183+07:00</Time>
+    </Item>
+    <Item>
+      <Source>menu\ship1.png</Source>
+      <Name>menu\ship1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\icup\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\menu\ship1.xnb</Output>
+      <Time>2014-02-27T15:28:18.8914178+07:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
