@@ -72,15 +72,15 @@ namespace WarpJam
         {
             // TODO: Add your initialization logic here
             SceneManager.RenderContext.GraphicsDevice = graphics.GraphicsDevice;
-            SceneManager.RenderContext.LineBatch = new LineBatch(graphics.GraphicsDevice);
 
             // Add semua scene yang ada
+            SceneManager.AddGameScene(new TitleScreen());
             SceneManager.AddGameScene(new MainMenu());
             SceneManager.AddGameScene(new MainLevel());
             SceneManager.AddGameScene(new PilihLevel());
 
             // Set Scene pertama
-            SceneManager.SetActiveScene("PilihLevel");
+            SceneManager.SetActiveScene("TitleScreen");
             SceneManager.Initialize();
 
             base.Initialize();
@@ -122,7 +122,7 @@ namespace WarpJam
             // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
             {
-                if (SceneManager.ActiveScene.SceneName == "MainMenu")
+                if (SceneManager.ActiveScene.SceneName == "MainMenu" || SceneManager.ActiveScene.SceneName == "TitleScreen")
                 {
                     if (SceneManager.ActiveScene.BackPressed())
                     {

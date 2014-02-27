@@ -18,7 +18,7 @@ namespace WarpJam
 {
     class Pesawat : GameObject2D
     {
-        private GameAnimatedSprite pesawat, shield;
+        private GameAnimatedSprite pesawat, shield, exhaustmiddle, exhausttop, exhaustbottom;
         public GameSprite Sprite { get { return pesawat;  } }
 
         public StatePesawat CurrentState = StatePesawat.Normal;
@@ -47,10 +47,28 @@ namespace WarpJam
             shield.CanDraw = false;
             shield.PlayAnimation(true);
 
+            exhaustmiddle = new GameAnimatedSprite("level\\exhaustmiddle", 4, 80, new Point(135, 60));
+            exhaustmiddle.Origin = new Vector2(95, 30);
+            exhaustmiddle.CanDraw = false;
+            exhaustmiddle.PlayAnimation(true);
+
+            exhausttop = new GameAnimatedSprite("level\\exhausttop", 4, 80, new Point(135, 60));
+            exhausttop.Origin = new Vector2(95, 30);
+            exhausttop.CanDraw = false;
+            exhausttop.PlayAnimation(true);
+
+            exhaustbottom = new GameAnimatedSprite("level\\exhaustbottom", 4, 80, new Point(135, 60));
+            exhaustbottom.Origin = new Vector2(95, 30);
+            exhaustbottom.CanDraw = false;
+            exhaustbottom.PlayAnimation(true);
+
             pesawat = new GameAnimatedSprite("level\\pesawat", 4, 80, new Point(95, 60));
             pesawat.Origin = new Vector2(47.5f, 30);
 
             pesawat.AddChild(shield);
+            pesawat.AddChild(exhaustmiddle);
+            pesawat.AddChild(exhausttop);
+            pesawat.AddChild(exhaustbottom);
             AddChild(pesawat);
 
             base.Initialize();
@@ -119,6 +137,39 @@ namespace WarpJam
             return true;
         }
 
+        public void SetExhaust(int num)
+        {
+            if (CurrentState == StatePesawat.Ready)
+            {
+                switch (num)
+                {
+                    case 1:
+                        exhaustmiddle.CanDraw = true;
+                        exhaustbottom.CanDraw = false;
+                        exhausttop.CanDraw = false;
+                        break;
+                    case 2:
+                        exhaustmiddle.CanDraw = false;
+                        exhaustbottom.CanDraw = false;
+                        exhausttop.CanDraw = true;
+                        break;
+                    case 3:
+                        exhaustmiddle.CanDraw = false;
+                        exhaustbottom.CanDraw = true;
+                        exhausttop.CanDraw = false;
+                        break;
+                }
+            }
+        }
+
+        public void Finished()
+        {
+            pesawat.CurrentFrame = 0;
+            exhaustmiddle.CanDraw = false;
+            exhaustbottom.CanDraw = false;
+            exhausttop.CanDraw = false;
+        }
+
         public override void Update(RenderContext renderContext)
         {
             // check shield
@@ -136,7 +187,10 @@ namespace WarpJam
 
             // check gesture
             if (!TouchPanel.IsGestureAvailable)
+            {
                 pesawat.CurrentFrame = 0;
+                SetExhaust(1);
+            }
             else
             {
                 while (TouchPanel.IsGestureAvailable)
@@ -152,22 +206,31 @@ namespace WarpJam
                             break;
                     }
 
-                    if (CurrentState == StatePesawat.Ready)
+                    if (dragPos.X <= 400)
                     {
-                        // animasi
-                        var oldPos = ConvertUnits.ToDisplayUnits(rectangle.Position.Y);
-                        Vector2 nextPosition = ConvertUnits.ToDisplayUnits(rectangle.Position) + (dragDelta * 1.2f);
-                        var newPos = nextPosition.Y;
+                        if (CurrentState == StatePesawat.Ready)
+                        {
+                            // animasi
+                            var oldPos = ConvertUnits.ToDisplayUnits(rectangle.Position.Y);
+                            Vector2 nextPosition = ConvertUnits.ToDisplayUnits(rectangle.Position) + (dragDelta * 1.5f);
+                            var newPos = nextPosition.Y;
 
-                        var delta = newPos - oldPos;
+                            var delta = newPos - oldPos;
 
-                        if (delta > 2.5f)
-                            pesawat.CurrentFrame = 1;
-                        else if (delta < -2.5f)
-                            pesawat.CurrentFrame = 3;
+                            if (delta > 3f)
+                            {
+                                pesawat.CurrentFrame = 1;
+                                SetExhaust(3);
+                            }
+                            else if (delta < -3f)
+                            {
+                                pesawat.CurrentFrame = 3;
+                                SetExhaust(2);
+                            }
 
-                        rectangle.Position = ConvertUnits.ToSimUnits(nextPosition);
-                        pesawat.Translate(ConvertUnits.ToDisplayUnits(rectangle.Position));
+                            rectangle.Position = ConvertUnits.ToSimUnits(nextPosition);
+                            pesawat.Translate(ConvertUnits.ToDisplayUnits(rectangle.Position));
+                        }
                     }
                 }
             }
@@ -188,6 +251,7 @@ namespace WarpJam
         {
             InitiatePhysics();
             shield.CanDraw = false;
+            exhaustmiddle.CanDraw = false;
             CameraManager.getInstance().camera.Focus = pesawat;
             CameraManager.getInstance().camera.IsIgnoreY = true;
             CameraManager.getInstance().camera.SetScreenCenter(4, 2);
