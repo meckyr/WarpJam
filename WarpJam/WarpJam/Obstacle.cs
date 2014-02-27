@@ -30,14 +30,14 @@ namespace WarpJam
 
         public override void Initialize()
         {
-            explosion = new GameAnimatedSprite("level\\obstacledestroyed", 3, 160, new Point(55, 55));
-            explosion.Origin = new Vector2(27.5f, 27.5f);
+            explosion = new GameAnimatedSprite("level\\obstacledestroyed", 4, 80, new Point(80, 80));
+            explosion.Origin = new Vector2(40, 40);
             explosion.Translate(position);
             explosion.CanDraw = false;
             explosion.PlayAnimation(true);
 
-            monster = new GameAnimatedSprite("level\\obstacle", 4, 80, new Point(60, 60));
-            monster.Origin = new Vector2(30, 30);
+            monster = new GameAnimatedSprite("level\\obstacle", 4, 80, new Point(80, 80));
+            monster.Origin = new Vector2(40, 40);
             monster.Translate(position);
             monster.PlayAnimation(true);
 

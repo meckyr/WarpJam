@@ -45,7 +45,7 @@ namespace WarpJam
             AddObjectWithParticle(portal);
             portal.Translate(200, 200);
 
-            CameraManager.getInstance().camera.Focus = portal;
+            //CameraManager.getInstance().camera.Focus = portal;
             CameraManager.getInstance().camera.IsIgnoreY = false;
             TouchPanel.EnabledGestures = GestureType.FreeDrag;
         }
