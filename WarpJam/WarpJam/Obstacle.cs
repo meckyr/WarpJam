@@ -5,10 +5,12 @@ using System.Text;
 using WarpJam.Tools;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Media;
+using ProjectMercury;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace WarpJam
 {
-    class Obstacle : GameObject2D
+    class Obstacle : GameObject2D, ObjectWithParticle
     {
         private GameAnimatedSprite monster, explosion;
         public GameSprite Sprite { get { return monster; } }
@@ -16,6 +18,8 @@ namespace WarpJam
         private TimeSpan time;
         private Vector2 position;
         public StateObstacle CurrentState = StateObstacle.Normal;
+
+        public List<ParticleEffect> particles;
         public enum StateObstacle
         {
             Normal,
@@ -30,7 +34,8 @@ namespace WarpJam
 
         public override void Initialize()
         {
-            explosion = new GameAnimatedSprite("level\\obstacledestroyed", 4, 80, new Point(80, 80));
+            particles = new List<ParticleEffect>();
+explosion = new GameAnimatedSprite("level\\obstacledestroyed", 4, 80, new Point(80, 80));
             explosion.Origin = new Vector2(40, 40);
             explosion.Translate(position);
             explosion.CanDraw = false;
@@ -60,6 +65,12 @@ namespace WarpJam
                 {
                     monster.CanDraw = false;
                     explosion.CanDraw = true;
+                    var position = new Vector3(this.WorldPosition.X, this.WorldPosition.Y, 0);
+                    foreach (ParticleEffect particleEffect in particles)
+                    {
+                        particleEffect.Trigger(ref position);
+                        particleEffect.Update((float)SceneManager.gameTime.ElapsedGameTime.TotalSeconds);
+                    }
 
                     if (MediaPlayer.PlayPosition > time - TimeSpan.FromSeconds(0.2) && MediaPlayer.PlayPosition < time + TimeSpan.FromSeconds(0.2))
                     {
@@ -97,6 +108,47 @@ namespace WarpJam
             CurrentState = StateObstacle.Normal;
             monster.CanDraw = true;
             explosion.CanDraw = false;
+        }
+
+        public List<ParticleEffect> Particles
+        {
+            get
+            {
+                return particles;
+            }
+            set
+            {
+                particles = value;
+            }
+        }
+
+        public void LoadParticle(Microsoft.Xna.Framework.Content.ContentManager contentManager, ProjectMercury.Renderers.SpriteBatchRenderer particleRenderer)
+        {
+            ParticleEffect particleEffect = contentManager.Load<ParticleEffect>("particles//Warp");
+
+            foreach (var emitter in particleEffect.Emitters)
+            {
+                if (!emitter.Initialised)
+                {
+                    emitter.Initialise();
+                }
+
+                emitter.ParticleTexture = contentManager.Load<Texture2D>("particles//LensFlare");
+            }
+
+            particleRenderer.LoadContent(contentManager);
+            particles.Add(particleEffect);
+        }
+
+        public void DrawParticle(RenderContext renderContext)
+        {
+            var matrix = Matrix.Identity;
+            var cameraPosition = Vector3.Zero;
+            foreach (ParticleEffect particleEffect in particles)
+            {
+                renderContext.particleRenderer.Transformation = CameraManager.getInstance().camera.Transform;
+                renderContext.particleRenderer.RenderEffect(particleEffect, ref matrix, ref matrix, ref matrix, ref cameraPosition);
+            }
         }
     }
 }

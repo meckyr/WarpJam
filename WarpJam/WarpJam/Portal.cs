@@ -79,10 +79,7 @@ namespace WarpJam
         public void DrawParticle(Tools.RenderContext renderContext)
         {
             var matrix = Matrix.Identity;
-            //Vector3 cameraPosition = new Vector3(CameraManager.getInstance().camera.Position.X, CameraManager.getInstance().camera.Position.Y, 0);
             var cameraPosition = Vector3.Zero;
-            CameraManager.getInstance().camera.Rotation = 1.56618786f;
-            CameraManager.getInstance().camera.Scale = 0.05f;
             renderContext.particleRenderer.Transformation = CameraManager.getInstance().camera.Transform;
             renderContext.particleRenderer.RenderEffect(particleEffect, ref matrix, ref matrix, ref matrix, ref cameraPosition);
         }

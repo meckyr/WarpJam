@@ -32,9 +32,14 @@ namespace WarpJam
         private Color lineColor = Color.Purple;
         private bool isFinished = false;
 
+        #region particles
+        
+        #endregion
+
         public MainLevel()
             : base("MainLevel")
         {
+            
         }
 
         public override void Initialize()
@@ -74,6 +79,8 @@ namespace WarpJam
             pesawat = new Pesawat();
             AddSceneObject(pesawat);
 
+            bg_particle = new BackgroundParticle();
+
             MediaPlayer.MediaStateChanged += new EventHandler<EventArgs>(MediaPlayer_MediaStateChanged);
 
             base.Initialize();
@@ -99,24 +106,204 @@ namespace WarpJam
             Obstacle obstacle1 = new Obstacle(new Vector2(2425, 400), TimeSpan.FromSeconds(6.729));
             obstacle.Add(obstacle1);
             AddSceneObject(obstacle1);
+            AddObjectWithParticle(obstacle1);
 
             Obstacle obstacle2 = new Obstacle(new Vector2(3280, 80), TimeSpan.FromSeconds(10.056));
             obstacle.Add(obstacle2);
             AddSceneObject(obstacle2);
+            AddObjectWithParticle(obstacle2);
 
             Obstacle obstacle3 = new Obstacle(new Vector2(4090, 400), TimeSpan.FromSeconds(13.281));
             obstacle.Add(obstacle3);
             AddSceneObject(obstacle3);
+            AddObjectWithParticle(obstacle3);
 
             Obstacle obstacle4 = new Obstacle(new Vector2(4300, 210), TimeSpan.FromSeconds(14.131));
             obstacle.Add(obstacle4);
             AddSceneObject(obstacle4);
+            AddObjectWithParticle(obstacle4);
 
             Obstacle obstacle5 = new Obstacle(new Vector2(4720, 300), TimeSpan.FromSeconds(15.794));
             obstacle.Add(obstacle5);
             AddSceneObject(obstacle5);
+            AddObjectWithParticle(obstacle5);
+Obstacle obstacle6 = new Obstacle(new Vector2(5150, 120), TimeSpan.FromSeconds(17.460));
+            obstacle.Add(obstacle6);
+            AddSceneObject(obstacle6);
 
-            Obstacle obstacle6 = new Obstacle(new Vector2(5150, 120), TimeSpan.FromSeconds(17.460));
+            Obstacle obstacle7 = new Obstacle(new Vector2(5200, 120), TimeSpan.FromSeconds(17.802));
+            obstacle.Add(obstacle7);
+            AddSceneObject(obstacle7);
+
+            Obstacle obstacle8 = new Obstacle(new Vector2(5510, 330), TimeSpan.FromSeconds(19.127));
+            obstacle.Add(obstacle8);
+            AddSceneObject(obstacle8);
+
+            Obstacle obstacle9 = new Obstacle(new Vector2(5930, 275), TimeSpan.FromSeconds(20.688));
+            obstacle.Add(obstacle9);
+            AddSceneObject(obstacle9);
+
+            Obstacle obstacle10 = new Obstacle(new Vector2(6390, 230), TimeSpan.FromSeconds(22.387));
+            obstacle.Add(obstacle10);
+            AddSceneObject(obstacle10);
+
+            Obstacle obstacle11 = new Obstacle(new Vector2(6800, 270), TimeSpan.FromSeconds(24.085));
+            obstacle.Add(obstacle11);
+            AddSceneObject(obstacle11);
+
+            // -----
+
+            Obstacle obstacle12 = new Obstacle(new Vector2(2600, 400), TimeSpan.FromSeconds(24.460));
+            obstacle.Add(obstacle12);
+            AddSceneObject(obstacle12);
+
+            Obstacle obstacle13 = new Obstacle(new Vector2(3000, 400), TimeSpan.FromSeconds(25.717));
+            obstacle.Add(obstacle13);
+            AddSceneObject(obstacle13);
+
+            Obstacle obstacle14 = new Obstacle(new Vector2(4000, 400), TimeSpan.FromSeconds(27.380));
+            obstacle.Add(obstacle14);
+            AddSceneObject(obstacle14);
+
+            Obstacle obstacle15 = new Obstacle(new Vector2(6000, 400), TimeSpan.FromSeconds(27.720));
+            obstacle.Add(obstacle15);
+            AddSceneObject(obstacle15);
+
+            Obstacle obstacle16 = new Obstacle(new Vector2(2425, 400), TimeSpan.FromSeconds(29.011));
+            obstacle.Add(obstacle16);
+            AddSceneObject(obstacle16);
+
+            // -------
+
+            Obstacle obstacle17 = new Obstacle(new Vector2(2600, 400), TimeSpan.FromSeconds(30.672));
+            obstacle.Add(obstacle17);
+            AddSceneObject(obstacle17);
+
+            Obstacle obstacle18 = new Obstacle(new Vector2(3000, 400), TimeSpan.FromSeconds(32.340));
+            obstacle.Add(obstacle18);
+            AddSceneObject(obstacle18);
+
+            Obstacle obstacle19 = new Obstacle(new Vector2(4000, 400), TimeSpan.FromSeconds(34.038));
+            obstacle.Add(obstacle19);
+            AddSceneObject(obstacle19);
+
+            Obstacle obstacle20 = new Obstacle(new Vector2(6000, 400), TimeSpan.FromSeconds(35.637));
+            obstacle.Add(obstacle20);
+            AddSceneObject(obstacle20);
+
+            Obstacle obstacle21 = new Obstacle(new Vector2(2425, 400), TimeSpan.FromSeconds(36.039));
+            obstacle.Add(obstacle21);
+            AddSceneObject(obstacle21);
+
+            Obstacle obstacle22 = new Obstacle(new Vector2(2600, 400), TimeSpan.FromSeconds(37.300));
+            obstacle.Add(obstacle22);
+            AddSceneObject(obstacle22);
+
+            Obstacle obstacle23 = new Obstacle(new Vector2(3000, 400), TimeSpan.FromSeconds(37.671));
+            obstacle.Add(obstacle23);
+            AddSceneObject(obstacle23);
+
+            Obstacle obstacle24 = new Obstacle(new Vector2(4000, 400), TimeSpan.FromSeconds(38.960));
+            obstacle.Add(obstacle24);
+            AddSceneObject(obstacle24);
+
+            Obstacle obstacle25 = new Obstacle(new Vector2(6000, 400), TimeSpan.FromSeconds(39.300));
+            obstacle.Add(obstacle25);
+            AddSceneObject(obstacle25);
+
+            // ---------------------------------------
+
+            Obstacle obstacle26 = new Obstacle(new Vector2(2600, 400), TimeSpan.FromSeconds(40.593));
+            obstacle.Add(obstacle26);
+            AddSceneObject(obstacle26);
+
+            Obstacle obstacle27 = new Obstacle(new Vector2(3000, 400), TimeSpan.FromSeconds(42.255));
+            obstacle.Add(obstacle27);
+            AddSceneObject(obstacle27);
+
+            Obstacle obstacle28 = new Obstacle(new Vector2(4000, 400), TimeSpan.FromSeconds(43.956));
+            obstacle.Add(obstacle28);
+            AddSceneObject(obstacle28);
+
+            Obstacle obstacle29 = new Obstacle(new Vector2(6000, 400), TimeSpan.FromSeconds(44.297));
+            obstacle.Add(obstacle29);
+            AddSceneObject(obstacle29);
+
+            Obstacle obstacle30 = new Obstacle(new Vector2(2425, 400), TimeSpan.FromSeconds(45.584));
+            obstacle.Add(obstacle30);
+            AddSceneObject(obstacle30);
+
+            Obstacle obstacle31 = new Obstacle(new Vector2(2600, 400), TimeSpan.FromSeconds(45.923));
+            obstacle.Add(obstacle31);
+            AddSceneObject(obstacle31);
+
+            Obstacle obstacle32 = new Obstacle(new Vector2(3000, 400), TimeSpan.FromSeconds(47.251));
+            obstacle.Add(obstacle32);
+            AddSceneObject(obstacle32);
+
+            Obstacle obstacle33 = new Obstacle(new Vector2(4000, 400), TimeSpan.FromSeconds(47.623));
+            obstacle.Add(obstacle33);
+            AddSceneObject(obstacle33);
+
+            Obstacle obstacle34 = new Obstacle(new Vector2(6000, 400), TimeSpan.FromSeconds(48.879));
+            obstacle.Add(obstacle34);
+            AddSceneObject(obstacle34);
+
+            Obstacle obstacle35 = new Obstacle(new Vector2(2600, 400), TimeSpan.FromSeconds(50.577));
+            obstacle.Add(obstacle35);
+            AddSceneObject(obstacle35);
+
+            Obstacle obstacle36 = new Obstacle(new Vector2(3000, 400), TimeSpan.FromSeconds(50.919));
+            obstacle.Add(obstacle36);
+            AddSceneObject(obstacle36);
+
+            Obstacle obstacle37 = new Obstacle(new Vector2(4000, 400), TimeSpan.FromSeconds(52.207));
+            obstacle.Add(obstacle37);
+            AddSceneObject(obstacle37);
+
+            Obstacle obstacle38 = new Obstacle(new Vector2(6000, 400), TimeSpan.FromSeconds(53.871));
+            obstacle.Add(obstacle38);
+            AddSceneObject(obstacle38);
+
+            Obstacle obstacle39 = new Obstacle(new Vector2(2425, 400), TimeSpan.FromSeconds(55.502));
+            obstacle.Add(obstacle39);
+            AddSceneObject(obstacle39);
+
+            Obstacle obstacle40 = new Obstacle(new Vector2(2600, 400), TimeSpan.FromSeconds(55.876));
+            obstacle.Add(obstacle40);
+            AddSceneObject(obstacle40);
+
+            Obstacle obstacle41 = new Obstacle(new Vector2(3000, 400), TimeSpan.FromSeconds(57.234));
+            obstacle.Add(obstacle41);
+            AddSceneObject(obstacle41);
+
+            Obstacle obstacle42 = new Obstacle(new Vector2(4000, 400), TimeSpan.FromSeconds(58.864));
+            obstacle.Add(obstacle42);
+            AddSceneObject(obstacle42);
+
+            Obstacle obstacle43 = new Obstacle(new Vector2(6000, 400), TimeSpan.FromSeconds(59.239));
+            obstacle.Add(obstacle43);
+            AddSceneObject(obstacle43);
+
+            Obstacle obstacle44 = new Obstacle(new Vector2(2600, 400), TimeSpan.FromSeconds(60.529));
+            obstacle.Add(obstacle44);
+            AddSceneObject(obstacle44);
+
+            Obstacle obstacle45 = new Obstacle(new Vector2(3000, 400), TimeSpan.FromSeconds(62.125));
+            obstacle.Add(obstacle45);
+            AddSceneObject(obstacle45);
+
+            Obstacle obstacle46 = new Obstacle(new Vector2(4000, 400), TimeSpan.FromSeconds(63.754));
+            obstacle.Add(obstacle46);
+            AddSceneObject(obstacle46);
+
+            Obstacle obstacle47 = new Obstacle(new Vector2(6000, 400), TimeSpan.FromSeconds(65.489));
+            obstacle.Add(obstacle47);
+            AddSceneObject(obstacle47);
+
+            Obstacle obstacle48 = new Obstacle(new Vector2(2425, 400), TimeSpan.FromSeconds(65.862));
+            obstacle.Add(obstacle48);
+            AddSceneObject(obstacle48);<<<<<<< .mine
             obstacle.Add(obstacle6);
             AddSceneObject(obstacle6);
 
@@ -293,6 +480,184 @@ namespace WarpJam
             Obstacle obstacle48 = new Obstacle(new Vector2(2425, 400), TimeSpan.FromSeconds(65.862));
             obstacle.Add(obstacle48);
             AddSceneObject(obstacle48);
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> .theirs
         }
 
         public void SpawnScore(int i)
@@ -354,6 +719,12 @@ namespace WarpJam
             base.LoadContent(contentmanager);
         }
 
+        public override void LoadParticle(ContentManager contentmanager, ProjectMercury.Renderers.SpriteBatchRenderer particleRenderer)
+        {
+            base.LoadParticle(contentmanager, particleRenderer);
+            bg_particle.LoadParticle(contentmanager, particleRenderer);
+        }
+
         void MediaPlayer_MediaStateChanged(object sender, EventArgs e)
         {
             if (isFinished)
@@ -369,6 +740,10 @@ namespace WarpJam
 
         public override void Update(RenderContext rendercontext, ContentManager contentmanager)
         {
+            //particle bg
+            bg_particle.Update(rendercontext);
+            //end particle bg
+
             if (delay > 0)
                 delay -= rendercontext.GameTime.ElapsedGameTime.TotalSeconds;
 

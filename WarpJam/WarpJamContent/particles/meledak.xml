@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent>
+  <Asset Type="ProjectMercury.ParticleEffect">
+    <Name>Magic Trail</Name>
+    <Author></Author>
+    <Description></Description>
+    <Emitters>
+      <Item Type="ProjectMercury.Emitters.PointEmitter">
+        <Name>Sparkles</Name>
+        <Budget>700</Budget>
+        <Term>1</Term>
+        <ReleaseQuantity>5</ReleaseQuantity>
+        <Enabled>true</Enabled>
+        <ReleaseSpeed>[48,48]</ReleaseSpeed>
+        <ReleaseColour>
+          <Red>[1,1]</Red>
+          <Green>[1,1]</Green>
+          <Blue>[0.5019608,0.5019608]</Blue>
+        </ReleaseColour>
+        <ReleaseOpacity>[1,1]</ReleaseOpacity>
+        <ReleaseScale>[16,16]</ReleaseScale>
+        <ReleaseRotation>
+          <Pitch>[0,0]</Pitch>
+          <Yaw>[0,0]</Yaw>
+          <Roll>[-1.47,1.47]</Roll>
+        </ReleaseRotation>
+        <ParticleTextureAssetPath>LensFlare</ParticleTextureAssetPath>
+        <BlendMode>Add</BlendMode>
+        <Modifiers>
+          <Modifier Type="ProjectMercury.Modifiers.ColourInterpolator2">
+            <InitialColour>1 1 0.5019608</InitialColour>
+            <FinalColour>1 1 0</FinalColour>
+          </Modifier>
+          <Modifier Type="ProjectMercury.Modifiers.OpacityInterpolator2">
+            <InitialOpacity>1</InitialOpacity>
+            <FinalOpacity>0</FinalOpacity>
+          </Modifier>
+        </Modifiers>
+        <Controllers />
+      </Item>
+      <Item Type="ProjectMercury.Emitters.PointEmitter">
+        <Name>Sparkles</Name>
+        <Budget>700</Budget>
+        <Term>1</Term>
+        <ReleaseQuantity>5</ReleaseQuantity>
+        <Enabled>true</Enabled>
+        <ReleaseSpeed>[32,32]</ReleaseSpeed>
+        <ReleaseColour>
+          <Red>[1,1]</Red>
+          <Green>[1,1]</Green>
+          <Blue>[0.5019608,0.5019608]</Blue>
+        </ReleaseColour>
+        <ReleaseOpacity>[1,1]</ReleaseOpacity>
+        <ReleaseScale>[32,32]</ReleaseScale>
+        <ReleaseRotation>
+          <Pitch>[0,0]</Pitch>
+          <Yaw>[0,0]</Yaw>
+          <Roll>[-1.47,1.47]</Roll>
+        </ReleaseRotation>
+        <ParticleTextureAssetPath Null="true" />
+        <BlendMode>Add</BlendMode>
+        <Modifiers>
+          <Modifier Type="ProjectMercury.Modifiers.ColourInterpolator2">
+            <InitialColour>1 0.5019608 0</InitialColour>
+            <FinalColour>1 0.5019608 0</FinalColour>
+          </Modifier>
+          <Modifier Type="ProjectMercury.Modifiers.OpacityInterpolator2">
+            <InitialOpacity>1</InitialOpacity>
+            <FinalOpacity>0</FinalOpacity>
+          </Modifier>
+        </Modifiers>
+        <Controllers />
+      </Item>
+    </Emitters>
+  </Asset>
+</XnaContent>

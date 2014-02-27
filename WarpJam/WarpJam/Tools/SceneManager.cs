@@ -182,6 +182,12 @@ namespace WarpJam.Tools
                 ActiveScene.DrawHUD(RenderContext);
                 RenderContext.SpriteBatch.End();
 
+                //draw bg particle
+                if (ActiveScene.bg_particle != null)
+                {
+                    ActiveScene.DrawBGParticle(RenderContext);
+                }
+
                 if (CameraManager.getInstance().camera.Focus == null)
                 {
                     RenderContext.SpriteBatch.Begin();
