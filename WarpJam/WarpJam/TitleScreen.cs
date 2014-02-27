@@ -31,13 +31,13 @@ namespace WarpJam
             AddSceneObject(star1);
 
             star2 = new GameAnimatedSprite("menu\\star", 10, 105, new Point(55, 58));
-            star2.Color = Color.Purple;
+            star2.Color = Color.Violet;
             star2.Translate(720, 50);
             star2.PlayAnimation(true);
             AddSceneObject(star2);
 
             star3 = new GameAnimatedSprite("menu\\star", 10, 80, new Point(55, 58));
-            star3.Color = Color.Purple;
+            star3.Color = Color.Violet;
             star3.Translate(10, 340);
             star3.PlayAnimation(true);
             AddSceneObject(star3);
@@ -49,7 +49,7 @@ namespace WarpJam
             AddSceneObject(star4);
 
             star5 = new GameAnimatedSprite("menu\\star", 10, 40, new Point(55, 58));
-            star5.Color = Color.Purple;
+            star5.Color = Color.Violet;
             star5.Scale(0.5f, 0.5f);
             star5.Translate(500, 90);
             star5.PlayAnimation(true);

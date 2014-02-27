@@ -41,33 +41,33 @@ namespace WarpJam.Tools
             AddChild(star1);
 
             star2 = new GameAnimatedSprite("menu\\star", 10, 105, new Point(55, 58));
-            star2.Color = Color.Purple;
+            star2.Color = Color.Violet;
             star2.Scale(1.2f, 1.2f);
             star2.Translate(720, 50);
             star2.PlayAnimation(true);
             AddChild(star2);
 
             star3 = new GameAnimatedSprite("menu\\star", 10, 80, new Point(55, 58));
-            star3.Color = Color.Red;
+            star3.Color = Color.White;
             star3.Translate(10, 340);
             star3.PlayAnimation(true);
             AddChild(star3);
 
             star4 = new GameAnimatedSprite("menu\\star", 10, 65, new Point(55, 58));
-            star4.Color = Color.Yellow;
+            star4.Color = Color.Cyan;
             star4.Translate(500, 500);
             star4.PlayAnimation(true);
             AddChild(star4);
 
             star5 = new GameAnimatedSprite("menu\\star", 10, 40, new Point(55, 58));
-            star5.Color = Color.Orange;
+            star5.Color = Color.White;
             star5.Scale(0.5f, 0.5f);
             star5.Translate(420, 200);
             star5.PlayAnimation(true);
             AddChild(star5);
 
             star6 = new GameAnimatedSprite("menu\\star", 10, 10, new Point(55, 58));
-            star6.Color = Color.Chocolate;
+            star6.Color = Color.Violet;
             star6.Translate(800, 420);
             star6.PlayAnimation(true);
             AddChild(star6);
@@ -80,13 +80,13 @@ namespace WarpJam.Tools
             AddChild(star7);
 
             star8 = new GameAnimatedSprite("menu\\star", 10, 80, new Point(55, 58));
-            star8.Color = Color.Blue;
+            star8.Color = Color.Cyan;
             star8.Translate(1200, 300);
             star8.PlayAnimation(true);
             AddChild(star8);
 
             star9 = new GameAnimatedSprite("menu\\star", 10, 65, new Point(55, 58));
-            star9.Color = Color.Gold;
+            star9.Color = Color.Violet;
             star9.Translate(1450, 150);
             star9.PlayAnimation(true);
             AddChild(star9);

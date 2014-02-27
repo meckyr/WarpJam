@@ -12,6 +12,7 @@ Content\menu\scorebutton.xnb
 Content\menu\background.xnb
 Content\menu\star.xnb
 Content\level\pesawat.xnb
+Content\font\font.xnb
 Content\level\background1.xnb
 Content\level\background2.xnb
 Content\menu\bintang.xnb
@@ -20,27 +21,24 @@ Content\level\leet.xnb
 Content\level\meh.xnb
 Content\level\sux.xnb
 Content\level\shield.xnb
-Content\pilih level\bg2000.xnb
-Content\pilih level\portal dummy.xnb
-Content\particles\Star.xnb
-Content\font\font.xnb
-Content\particles\Demo1.xnb
-Content\song\levelmusic2.xnb
-Content\song\levelmusic2.wma
-Content\song\mainmusic2.xnb
-Content\song\mainmusic2.wma
-Content\sfx\whoosh.xnb
-Content\sfx\pulse.xnb
-Content\sfx\pulse2.xnb
-Content\sfx\sux.xnb
 Content\level\exhaustmiddle.xnb
 Content\level\exhaustbottom.xnb
 Content\level\exhausttop.xnb
 Content\title\logo.xnb
 Content\title\text.xnb
+Content\song\levelmusic2.xnb
+Content\song\levelmusic2.wma
+Content\song\mainmusic2.xnb
+Content\song\mainmusic2.wma
 Content\menu\settingbuttonanimated.xnb
+Content\sfx\whoosh.xnb
+Content\sfx\pulse.xnb
+Content\sfx\pulse2.xnb
+Content\sfx\sux.xnb
 Content\menu\scorebuttonanimated.xnb
 Content\menu\playbuttonanimated.xnb
 Content\title\background.xnb
 Content\menu\ship2.xnb
 Content\menu\ship1.xnb
+Content\level\obstacledestroyed.xnb
+Content\level\obstacle.xnb

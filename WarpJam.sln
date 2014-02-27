@@ -5,7 +5,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarpJam", "WarpJam\WarpJam\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarpJamContent", "WarpJam\WarpJamContent\WarpJamContent.contentproj", "{E58C7D9F-255F-4A8A-B1F4-E38D55067145}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Farseer Physics WP7", "Farseer Physics Engine 3.5\Farseer Physics WP7.csproj", "{4DA8DC0C-EC1E-4C31-8B00-9C0DB87C5D0A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Farseer Physics WP7", "..\..\..\..\File ECKY\Imagine Cup\Farseer Physics Engine 3.5\Farseer Physics WP7.csproj", "{4DA8DC0C-EC1E-4C31-8B00-9C0DB87C5D0A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

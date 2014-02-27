@@ -71,6 +71,7 @@
   <ItemGroup>
     <Compile Include="MainLevel.cs" />
     <Compile Include="MainMenu.cs" />
+    <Compile Include="Obstacle.cs" />
     <Compile Include="Pesawat.cs" />
     <Compile Include="PilihLevel.cs" />
     <Compile Include="Portal.cs" />
