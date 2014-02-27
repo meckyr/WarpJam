@@ -29,6 +29,7 @@ namespace WarpJam
         private const double Delay = 3;
         private double delay = Delay;
         private Color lineColor = Color.Purple;
+        private bool isFinished = false;
 
         public MainLevel()
             : base("MainLevel")
@@ -44,8 +45,7 @@ namespace WarpJam
             AddHUDObject(backdrop);
 
             text = new SpriteFonts("font\\font");
-            text.Translate(520, 50);
-            text.Color = Color.Red;
+            text.Translate(600, 50);
             AddHUDObject(text);
 
             InitiateScore();
@@ -55,7 +55,7 @@ namespace WarpJam
             fire.Translate(400, 0);
             fire.OnEnter += () =>
             {
-                if (delay <= 0)
+                if (pesawat.CurrentState == Pesawat.StatePesawat.Ready)
                 {
                     SceneManager.sux.Play();
                     SceneManager.Vibrator.Start(TimeSpan.FromMilliseconds(100));
@@ -68,43 +68,38 @@ namespace WarpJam
             pesawat = new Pesawat();
             AddSceneObject(pesawat);
 
+            MediaPlayer.MediaStateChanged += new EventHandler<EventArgs>(MediaPlayer_MediaStateChanged);
+
             base.Initialize();
         }
 
         public void SpawnScore()
         {
-            var oldPos = leet.LocalPosition;
-            leet.Translate(pesawat.Sprite.LocalPosition - new Vector2(-120, 80));
-            var newPos = leet.LocalPosition;
-
-            if (oldPos != newPos)
-            {
-                leet.CanDraw = true;
-                leet.PlayAnimation(false);
-            }
+            leet.CanDraw = true;
+            leet.PlayAnimation(false);
         }
 
         public void InitiateScore()
         {
-            sux = new GameAnimatedSprite("level\\sux", 5, 40, new Point(200, 70), 1);
+            sux = new GameAnimatedSprite("level\\sux", 5, 15, new Point(200, 70), 1);
             sux.Origin = new Vector2(100, 35);
             sux.Translate(500, 200);
             sux.CanDraw = false;
             AddSceneObject(sux);
 
-            meh = new GameAnimatedSprite("level\\meh", 5, 40, new Point(200, 70), 1);
+            meh = new GameAnimatedSprite("level\\meh", 5, 15, new Point(200, 70), 1);
             meh.Origin = new Vector2(100, 35);
             meh.Translate(500, 200);
             meh.CanDraw = false;
             AddSceneObject(meh);
 
-            gr8 = new GameAnimatedSprite("level\\gr8", 5, 40, new Point(200, 70), 1);
+            gr8 = new GameAnimatedSprite("level\\gr8", 5, 15, new Point(200, 70), 1);
             gr8.Origin = new Vector2(100, 35);
             gr8.Translate(500, 200);
             gr8.CanDraw = false;
             AddSceneObject(gr8);
 
-            leet = new GameAnimatedSprite("level\\leet", 5, 40, new Point(200, 70), 1);
+            leet = new GameAnimatedSprite("level\\leet", 5, 15, new Point(200, 70), 1);
             leet.Origin = new Vector2(100, 35);
             leet.Translate(500, 200);
             leet.CanDraw = false;
@@ -116,7 +111,18 @@ namespace WarpJam
             base.LoadContent(contentmanager);
         }
 
-        
+        void MediaPlayer_MediaStateChanged(object sender, EventArgs e)
+        {
+            if (isFinished)
+            {
+                isFinished = false;
+
+                SceneManager.push.Play();
+                SceneManager.SetActiveScene("MainMenu");
+                SceneManager.ActiveScene.ResetScene();
+                SceneManager.PlaySong(1);
+            }
+        }
 
         public override void Update(RenderContext rendercontext, ContentManager contentmanager)
         {
@@ -129,8 +135,15 @@ namespace WarpJam
                 pesawat.CurrentState = Pesawat.StatePesawat.Ready;
             }
 
-            text.Text = "Time: " + MediaPlayer.PlayPosition.TotalSeconds;
+            text.Text = "Score: " + MediaPlayer.PlayPosition.TotalSeconds;
             UpdateScore();
+
+            if (MediaPlayer.PlayPosition >= TimeSpan.FromSeconds(67.0))
+            {
+                pesawat.CurrentState = Pesawat.StatePesawat.Normal;
+                isFinished = true;
+                pesawat.Finished();
+            }
 
             base.Update(rendercontext, contentmanager);
         }
@@ -150,13 +163,21 @@ namespace WarpJam
             meh.Translate(pesawat.Sprite.LocalPosition - new Vector2(-120, 80));
             gr8.Translate(pesawat.Sprite.LocalPosition - new Vector2(-120, 80));
             leet.Translate(pesawat.Sprite.LocalPosition - new Vector2(-120, 80));
+
+            if (sux.LocalPosition.Y <= 50)
+            {
+                sux.Translate(pesawat.Sprite.LocalPosition - new Vector2(-120, -80));
+                meh.Translate(pesawat.Sprite.LocalPosition - new Vector2(-120, -80));
+                gr8.Translate(pesawat.Sprite.LocalPosition - new Vector2(-120, -80));
+                leet.Translate(pesawat.Sprite.LocalPosition - new Vector2(-120, -80));
+            }
         }
 
         public override void Draw(RenderContext rendercontext)
         {
-            base.Draw(rendercontext);
-
             DrawPath(rendercontext);
+
+            base.Draw(rendercontext);
         }
 
         public void DrawPath(RenderContext rendercontext)
@@ -420,7 +441,58 @@ namespace WarpJam
             rendercontext.SpriteBatch.DrawLine(new Vector2(15000f, 270f), new Vector2(15000f, 370f), lineColor, 5);
 
             rendercontext.SpriteBatch.DrawLine(new Vector2(15100f, 250f), new Vector2(15400f, 250f), lineColor, 5);
-            rendercontext.SpriteBatch.DrawLine(new Vector2(15000f, 370f), new Vector2(15400f, 370f), lineColor, 5);
+            rendercontext.SpriteBatch.DrawLine(new Vector2(15000f, 370f), new Vector2(15500f, 370f), lineColor, 5);
+
+            rendercontext.SpriteBatch.DrawLine(new Vector2(15400f, 250f), new Vector2(15400f, 150f), lineColor, 5);
+            rendercontext.SpriteBatch.DrawLine(new Vector2(15500f, 370f), new Vector2(15500f, 270f), lineColor, 5);
+
+            rendercontext.SpriteBatch.DrawLine(new Vector2(15400f, 150f), new Vector2(15800f, 150f), lineColor, 5);
+            rendercontext.SpriteBatch.DrawLine(new Vector2(15500f, 270f), new Vector2(15800f, 270f), lineColor, 5);
+
+            rendercontext.SpriteBatch.DrawLine(new Vector2(15800f, 150f), new Vector2(16000f, 350f), lineColor, 5);
+            rendercontext.SpriteBatch.DrawLine(new Vector2(15800f, 270f), new Vector2(16000f, 470f), lineColor, 5);
+
+            rendercontext.SpriteBatch.DrawLine(new Vector2(16000f, 350f), new Vector2(16000f, 200f), lineColor, 5);
+            rendercontext.SpriteBatch.DrawLine(new Vector2(16000f, 470f), new Vector2(16120f, 470f), lineColor, 5);
+
+            rendercontext.SpriteBatch.DrawLine(new Vector2(16000f, 200f), new Vector2(16060f, 200f), lineColor, 5);
+            rendercontext.SpriteBatch.DrawLine(new Vector2(16120f, 470f), new Vector2(16120f, 320f), lineColor, 5);
+
+            rendercontext.SpriteBatch.DrawLine(new Vector2(16060f, 200f), new Vector2(16060f, 10f), lineColor, 5);
+            rendercontext.SpriteBatch.DrawLine(new Vector2(16120f, 320f), new Vector2(16180f, 320f), lineColor, 5);
+
+            rendercontext.SpriteBatch.DrawLine(new Vector2(16060f, 10f), new Vector2(16400f, 10f), lineColor, 5);
+            rendercontext.SpriteBatch.DrawLine(new Vector2(16180f, 320f), new Vector2(16180f, 130f), lineColor, 5);
+
+            rendercontext.SpriteBatch.DrawLine(new Vector2(16400f, 10f), new Vector2(16450f, 200f), lineColor, 5);
+            rendercontext.SpriteBatch.DrawLine(new Vector2(16180f, 130f), new Vector2(16300f, 130f), lineColor, 5);
+
+            //
+            rendercontext.SpriteBatch.DrawLine(new Vector2(16300f, 130f), new Vector2(16350f, 400f), lineColor, 5);
+
+            rendercontext.SpriteBatch.DrawLine(new Vector2(16450f, 200f), new Vector2(16500f, 200f), lineColor, 5);
+            rendercontext.SpriteBatch.DrawLine(new Vector2(16350f, 400f), new Vector2(16500f, 320f), lineColor, 5);
+
+            rendercontext.SpriteBatch.DrawLine(new Vector2(16500f, 200f), new Vector2(16700f, 100f), lineColor, 5);
+            rendercontext.SpriteBatch.DrawLine(new Vector2(16500f, 320f), new Vector2(16700f, 220f), lineColor, 5);
+
+            rendercontext.SpriteBatch.DrawLine(new Vector2(16700f, 100f), new Vector2(16900f, 200f), lineColor, 5);
+            rendercontext.SpriteBatch.DrawLine(new Vector2(16700f, 220f), new Vector2(16900f, 320f), lineColor, 5);
+
+            rendercontext.SpriteBatch.DrawLine(new Vector2(16900f, 200f), new Vector2(16900f, 10f), lineColor, 5);
+            rendercontext.SpriteBatch.DrawLine(new Vector2(16900f, 320f), new Vector2(17020f, 320f), lineColor, 5);
+
+            rendercontext.SpriteBatch.DrawLine(new Vector2(16900f, 10f), new Vector2(17170f, 10f), lineColor, 5);
+            rendercontext.SpriteBatch.DrawLine(new Vector2(17020f, 320f), new Vector2(17020f, 130f), lineColor, 5);
+
+            rendercontext.SpriteBatch.DrawLine(new Vector2(17170f, 10f), new Vector2(17170f, 180f), lineColor, 5);
+            rendercontext.SpriteBatch.DrawLine(new Vector2(17020f, 130f), new Vector2(17050f, 130f), lineColor, 5);
+
+            rendercontext.SpriteBatch.DrawLine(new Vector2(17170f, 180f), new Vector2(17800f, 180f), lineColor, 5);
+            rendercontext.SpriteBatch.DrawLine(new Vector2(17050f, 130f), new Vector2(17050f, 300f), lineColor, 5);
+
+            //
+            rendercontext.SpriteBatch.DrawLine(new Vector2(17050f, 300f), new Vector2(17800f, 300f), lineColor, 5);
         }
 
         public override void ResetScene()

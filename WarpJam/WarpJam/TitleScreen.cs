@@ -12,7 +12,7 @@ namespace WarpJam
     class TitleScreen : GameScene 
     {
         private GameSprite bg;
-        private GameAnimatedSprite logo, text, star1, star2, star3, star4, star5, star6;
+        private GameAnimatedSprite logo, text, star1, star2, star3, star4, star5, star6, star7, star8;
 
         private const double Delay = 2.5f;
         private double delay = Delay;
@@ -24,20 +24,20 @@ namespace WarpJam
 
         public void InitiateStar()
         {
-            star1 = new GameAnimatedSprite("menu\\star", 10, 10, new Point(55, 58));
+            star1 = new GameAnimatedSprite("menu\\star", 10, 50, new Point(55, 58));
             star1.Color = Color.Cyan;
             star1.Translate(500, 100);
             star1.PlayAnimation(true);
             AddSceneObject(star1);
 
             star2 = new GameAnimatedSprite("menu\\star", 10, 105, new Point(55, 58));
-            star2.Color = Color.Cyan;
+            star2.Color = Color.Purple;
             star2.Translate(720, 50);
             star2.PlayAnimation(true);
             AddSceneObject(star2);
 
             star3 = new GameAnimatedSprite("menu\\star", 10, 80, new Point(55, 58));
-            star3.Color = Color.Cyan;
+            star3.Color = Color.Purple;
             star3.Translate(10, 340);
             star3.PlayAnimation(true);
             AddSceneObject(star3);
@@ -49,24 +49,37 @@ namespace WarpJam
             AddSceneObject(star4);
 
             star5 = new GameAnimatedSprite("menu\\star", 10, 40, new Point(55, 58));
-            star5.Color = Color.Cyan;
+            star5.Color = Color.Purple;
             star5.Scale(0.5f, 0.5f);
             star5.Translate(500, 90);
             star5.PlayAnimation(true);
             AddSceneObject(star5);
 
-            star6 = new GameAnimatedSprite("menu\\bintang", 8, 40, new Point(121, 26), 1);
-            star6.Color = Color.Cyan;
-            star6.Translate(100, 70);
-            star6.Rotate(45);
+            star6 = new GameAnimatedSprite("menu\\star", 10, 70, new Point(55, 58));
+            star6.Color = Color.Aqua;
+            star6.Scale(1.2f, 1.2f);
+            star6.Translate(180, 70);
             star6.PlayAnimation(true);
             AddSceneObject(star6);
+
+            star7 = new GameAnimatedSprite("menu\\bintang", 8, 40, new Point(121, 26), 1);
+            star7.Color = Color.Cyan;
+            star7.Translate(100, 70);
+            star7.Rotate(45);
+            star7.PlayAnimation(true);
+            AddSceneObject(star7);
+
+            star8 = new GameAnimatedSprite("menu\\bintang", 8, 80, new Point(121, 26), 1);
+            star8.Color = Color.Cyan;
+            star8.Translate(700, 100);
+            star8.Rotate(135);
+            star8.PlayAnimation(true);
+            AddSceneObject(star8);
         }
 
         public override void Initialize()
         {
             bg = new GameSprite("title\\background");
-            bg.Translate(-200, -200);
             AddSceneObject(bg);
 
             InitiateStar();

@@ -162,6 +162,14 @@ namespace WarpJam
             }
         }
 
+        public void Finished()
+        {
+            pesawat.CurrentFrame = 0;
+            exhaustmiddle.CanDraw = false;
+            exhaustbottom.CanDraw = false;
+            exhausttop.CanDraw = false;
+        }
+
         public override void Update(RenderContext renderContext)
         {
             // check shield
