@@ -58,6 +58,9 @@
     <Reference Include="Microsoft.Xna.Framework.GamerServices" />
     <Reference Include="Microsoft.Xna.Framework.Input.Touch" />
     <Reference Include="mscorlib" />
+    <Reference Include="ProjectMercury">
+      <HintPath>..\..\..\Mercury.4.0_WindowsPhone\ProjectMercury.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Windows, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e, processorArchitecture=MSIL" />
     <Reference Include="System.Xml" />
@@ -70,6 +73,8 @@
     <Compile Include="MainMenu.cs" />
     <Compile Include="Obstacle.cs" />
     <Compile Include="Pesawat.cs" />
+    <Compile Include="PilihLevel.cs" />
+    <Compile Include="Portal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TitleScreen.cs" />
     <Compile Include="Tools\Background.cs" />
@@ -84,6 +89,7 @@
     <Compile Include="Tools\ICamera2D.cs" />
     <Compile Include="Tools\IFocusable.cs" />
     <Compile Include="Tools\LineBatch.cs" />
+    <Compile Include="Tools\ObjectWithParticle.cs" />
     <Compile Include="Tools\Primitives2D.cs" />
     <Compile Include="Tools\RenderContext.cs" />
     <Compile Include="Tools\SceneManager.cs" />
@@ -107,7 +113,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\..\File ECKY\Imagine Cup\Farseer Physics Engine 3.5\Farseer Physics WP7.csproj">
+    <ProjectReference Include="..\..\Farseer Physics Engine 3.5\Farseer Physics WP7.csproj">
       <Project>{4DA8DC0C-EC1E-4C31-8B00-9C0DB87C5D0A}</Project>
       <Name>Farseer Physics WP7</Name>
     </ProjectReference>

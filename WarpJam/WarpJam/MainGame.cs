@@ -13,6 +13,7 @@ using Microsoft.Phone.Shell;
 using WarpJam.Tools;
 using System.Windows;
 using FarseerPhysics;
+using ProjectMercury.Renderers;
 
 namespace WarpJam
 {
@@ -23,6 +24,10 @@ namespace WarpJam
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+
+        #region untuk particle
+        SpriteBatchRenderer particleRenderer;
+        #endregion
 
         public MainGame()
         {
@@ -35,6 +40,9 @@ namespace WarpJam
             graphics.PreferMultiSampling = true;
             graphics.PreferredBackBufferWidth = 800;
             graphics.PreferredBackBufferHeight = 480;
+
+            // mercury
+            particleRenderer = new SpriteBatchRenderer() { GraphicsDeviceService = graphics };
 
             // Set farseer ratio (1 m = ?? px)
             ConvertUnits.SetDisplayUnitToSimUnitRatio(100f);
@@ -69,6 +77,7 @@ namespace WarpJam
             SceneManager.AddGameScene(new TitleScreen());
             SceneManager.AddGameScene(new MainMenu());
             SceneManager.AddGameScene(new MainLevel());
+            SceneManager.AddGameScene(new PilihLevel());
 
             // Set Scene pertama
             SceneManager.SetActiveScene("TitleScreen");
@@ -88,6 +97,7 @@ namespace WarpJam
 
             // TODO: use this.Content to load your game content here
             SceneManager.RenderContext.SpriteBatch = spriteBatch;
+            SceneManager.RenderContext.particleRenderer = particleRenderer;
             SceneManager.LoadContent(Content);
             Extensions.LoadContent(Content);
         }
@@ -108,6 +118,7 @@ namespace WarpJam
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
+            SceneManager.gameTime = gameTime;
             // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
             {

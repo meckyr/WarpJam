@@ -1,0 +1,6 @@
+D:\icup\WarpJam\Farseer Physics Engine 3.5\bin\Windows Phone\Debug\FarseerPhysics WP7.dll
+D:\icup\WarpJam\Farseer Physics Engine 3.5\bin\Windows Phone\Debug\FarseerPhysics WP7.pdb
+D:\icup\WarpJam\Farseer Physics Engine 3.5\obj\Windows Phone\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+D:\icup\WarpJam\Farseer Physics Engine 3.5\obj\Windows Phone\Debug\FarseerPhysics WP7.dll
+D:\icup\WarpJam\Farseer Physics Engine 3.5\obj\Windows Phone\Debug\FarseerPhysics WP7.pdb
+D:\icup\WarpJam\Farseer Physics Engine 3.5\obj\Windows Phone\Debug\Farseer Physics WP7.csprojResolveAssemblyReference.cache
