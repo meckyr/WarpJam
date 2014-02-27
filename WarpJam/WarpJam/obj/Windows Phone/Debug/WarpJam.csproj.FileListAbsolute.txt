@@ -132,3 +132,9 @@ E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\m
 E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\menu\ship1.xnb
 E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\level\obstacledestroyed.xnb
 E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\level\obstacle.xnb
+E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\WarpJam.xap
+E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\obj\Windows Phone\Debug\XapCacheFile.xml
+E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\AppManifest.xaml
+E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\obj\Windows Phone\Debug\WMAppManifest.xml.g
+E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\obj\Windows Phone\Debug\WMAppManifest.xml
+bin\Windows Phone\Debug\
