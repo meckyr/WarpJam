@@ -4,29 +4,30 @@ using System.Linq;
 using System.Text;
 using WarpJam.Tools;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Input.Touch;
+using ProjectMercury.Renderers;
 
 namespace WarpJam
 {
-    class PilihLevel:GameScene
+    class PilihLevel : GameScene
     {
         #region assets
         GameSprite bg;
-        Vector2 stageDimension;
         GameObject2D invisibleObject;
         SpriteFonts text;
-        int xxx = 0;
+        Rectangle swipeLimit = new Rectangle(400, 240, 2000-800, 2000-480);
+        Portal portal;
         #endregion
 
         public PilihLevel()
             : base("PilihLevel")
         {
-            stageDimension = new Vector2(800, 800);
         }
 
         public override void Initialize()
         {
             base.Initialize();
-            bg = new GameSprite("menu\\background");
+            bg = new GameSprite("pilih level\\bg2000");
             bg.Translate(0, 0);
             AddSceneObject(bg);
 
@@ -37,11 +38,16 @@ namespace WarpJam
 
             invisibleObject = new GameObject2D();
             AddSceneObject(invisibleObject);
+            invisibleObject.Translate(1000, 1000);
 
-            CameraManager.getInstance().camera.Focus = invisibleObject;
-            CameraManager.getInstance().camera.Position = new Vector2(1000, 1000);
-            
+            portal = new Portal("pilih level\\portal dummy", 1, 5, new Point(200,200), 1);
+            AddSceneObject(portal);
+            AddObjectWithParticle(portal);
+            portal.Translate(200, 200);
 
+            CameraManager.getInstance().camera.Focus = portal;
+            CameraManager.getInstance().camera.IsIgnoreY = false;
+            TouchPanel.EnabledGestures = GestureType.FreeDrag;
         }
 
         public override void LoadContent(Microsoft.Xna.Framework.Content.ContentManager contentmanager)
@@ -49,22 +55,20 @@ namespace WarpJam
             base.LoadContent(contentmanager);
         }
 
-        public override void Update(RenderContext rendercontext, Microsoft.Xna.Framework.Content.ContentManager contentmanager)
+        public override void LoadParticle(Microsoft.Xna.Framework.Content.ContentManager contentmanager, SpriteBatchRenderer particleRenderer)
         {
-            base.Update(rendercontext, contentmanager);
-            Vector2 newPos = invisibleObject.WorldPosition;
-            //newPos.X += 5;
-            text.Text = xxx.ToString();
-            if (xxx == 100)
-            {
-                invisibleObject.Translate(new Vector2(1000, 0));
-            }
-            xxx++;
-            
-            //invisibleObject.Translate(newPos);
+            base.LoadParticle(contentmanager, particleRenderer);
+            portal.LoadParticle(contentmanager, particleRenderer);
         }
 
-        public override void Draw(RenderContext rendercontext)
+        public override void Update(WarpJam.Tools.RenderContext rendercontext, Microsoft.Xna.Framework.Content.ContentManager contentmanager)
+        {
+            base.Update(rendercontext, contentmanager);
+
+            detectSwipe();
+        }
+
+        public override void Draw(WarpJam.Tools.RenderContext rendercontext)
         {
             base.Draw(rendercontext);
         }
@@ -72,6 +76,35 @@ namespace WarpJam
         public override bool BackPressed()
         {
             return base.BackPressed();
+        }
+
+        private void detectSwipe()
+        {
+            if (TouchPanel.IsGestureAvailable)
+            {
+                while (TouchPanel.IsGestureAvailable)
+                {
+                    Vector2 dragPos = Vector2.Zero;
+                    Vector2 dragDelta = Vector2.Zero;
+                    GestureSample gs = TouchPanel.ReadGesture();
+                    switch (gs.GestureType)
+                    {
+                        case GestureType.FreeDrag:
+                            {
+                                dragPos = gs.Position;
+                                dragDelta = gs.Delta;
+                                break;
+                            }
+
+                    }
+                    Vector2 newPos = invisibleObject.WorldPosition;
+                    if (swipeLimit.Contains((int)invisibleObject.WorldPosition.X - (int)dragDelta.X, (int)invisibleObject.WorldPosition.Y - (int)dragDelta.Y))
+                    {
+                        newPos -= dragDelta;
+                        invisibleObject.Translate(newPos);
+                    }
+                }
+            }
         }
     }
 }

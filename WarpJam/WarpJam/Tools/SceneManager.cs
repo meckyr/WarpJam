@@ -10,6 +10,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using System.Windows;
 using Microsoft.Xna.Framework.Graphics;
+using ProjectMercury.Renderers;
 
 namespace WarpJam.Tools
 {
@@ -18,7 +19,8 @@ namespace WarpJam.Tools
         public static List<GameScene> GameScenes { get; private set; }
         public static GameScene ActiveScene { get; private set; }
         public static RenderContext RenderContext { get; private set; }
-        
+        public static GameTime gameTime;
+
         // kumpulan soundeffect
         public static SoundEffect push { get; private set; }
         
@@ -118,6 +120,7 @@ namespace WarpJam.Tools
             PlaySong(1);
 
             GameScenes.ForEach(scene => scene.LoadContent(contentmanager));
+            GameScenes.ForEach(scene => scene.LoadParticle(contentmanager, RenderContext.particleRenderer));
         }
 
         public static void Update(GameTime gametime, ContentManager contentmanager)
@@ -161,10 +164,12 @@ namespace WarpJam.Tools
                 }
                 else
                 {
-                    RenderContext.SpriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, null, null, null, null, CameraManager.getInstance().camera.Transform);
+                    RenderContext.SpriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, null, null, null, null, CameraManager.getInstance().camera.Transform);
                     ActiveScene.Draw(RenderContext);
                     RenderContext.SpriteBatch.End();
                 }
+
+                ActiveScene.DrawParticle(RenderContext);
             }
         }
 

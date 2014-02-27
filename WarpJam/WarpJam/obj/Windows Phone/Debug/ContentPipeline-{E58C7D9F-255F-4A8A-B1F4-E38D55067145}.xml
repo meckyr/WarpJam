@@ -73,7 +73,25 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\icup\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\level\invisbutton.xnb</Output>
-      <Time>2014-02-24T18:27:23.7749285+07:00</Time>
+      <Time>2014-02-25T12:19:11.5577616+07:00</Time>
+    </Item>
+    <Item>
+      <Source>menu\settingbutton.png</Source>
+      <Name>menu\settingbutton</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\icup\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\menu\settingbutton.xnb</Output>
+      <Time>2014-02-24T18:27:23.8029332+07:00</Time>
+    </Item>
+    <Item>
+      <Source>menu\scorebutton.png</Source>
+      <Name>menu\scorebutton</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\icup\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\menu\scorebutton.xnb</Output>
+      <Time>2014-02-24T18:27:23.8009316+07:00</Time>
     </Item>
     <Item>
       <Source>menu\background.jpg</Source>
@@ -82,7 +100,25 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\icup\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\menu\background.xnb</Output>
-      <Time>2014-02-24T18:27:23.7919306+07:00</Time>
+      <Time>2014-02-25T12:19:11.5658447+07:00</Time>
+    </Item>
+    <Item>
+      <Source>menu\star.png</Source>
+      <Name>menu\star</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\icup\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\menu\star.xnb</Output>
+      <Time>2014-02-24T18:27:23.8049284+07:00</Time>
+    </Item>
+    <Item>
+      <Source>level\pesawat.png</Source>
+      <Name>level\pesawat</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\icup\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\level\pesawat.xnb</Output>
+      <Time>2014-02-24T18:27:23.7799252+07:00</Time>
     </Item>
     <Item>
       <Source>level\background1.jpg</Source>
@@ -101,6 +137,15 @@
       <Options>None</Options>
       <Output>D:\icup\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\level\background2.xnb</Output>
       <Time>2014-02-24T18:27:23.7665559+07:00</Time>
+    </Item>
+    <Item>
+      <Source>menu\bintang.png</Source>
+      <Name>menu\bintang</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\icup\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\menu\bintang.xnb</Output>
+      <Time>2014-02-24T18:27:23.7939311+07:00</Time>
     </Item>
     <Item>
       <Source>level\gr8.png</Source>
@@ -130,13 +175,13 @@
       <Time>2014-02-24T18:27:23.7789301+07:00</Time>
     </Item>
     <Item>
-      <Source>level\pesawat.png</Source>
-      <Name>level\pesawat</Name>
+      <Source>level\sux.png</Source>
+      <Name>level\sux</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\icup\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\level\pesawat.xnb</Output>
-      <Time>2014-02-24T18:27:23.7799252+07:00</Time>
+      <Output>D:\icup\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\level\sux.xnb</Output>
+      <Time>2014-02-24T18:27:23.7839284+07:00</Time>
     </Item>
     <Item>
       <Source>level\shield.png</Source>
@@ -148,13 +193,31 @@
       <Time>2014-02-24T18:27:23.7819301+07:00</Time>
     </Item>
     <Item>
-      <Source>level\sux.png</Source>
-      <Name>level\sux</Name>
+      <Source>pilih level\bg2000.jpg</Source>
+      <Name>pilih level\bg2000</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\icup\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\level\sux.xnb</Output>
-      <Time>2014-02-24T18:27:23.7839284+07:00</Time>
+      <Output>D:\icup\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\pilih level\bg2000.xnb</Output>
+      <Time>2014-02-25T12:24:22.7588363+07:00</Time>
+    </Item>
+    <Item>
+      <Source>pilih level\portal dummy.png</Source>
+      <Name>pilih level\portal dummy</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\icup\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\pilih level\portal dummy.xnb</Output>
+      <Time>2014-02-25T13:50:36.1498291+07:00</Time>
+    </Item>
+    <Item>
+      <Source>particles\Star.png</Source>
+      <Name>particles\Star</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\icup\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\particles\Star.xnb</Output>
+      <Time>2014-02-25T15:30:27.279456+07:00</Time>
     </Item>
     <Item>
       <Source>font\font.spritefont</Source>
@@ -166,40 +229,13 @@
       <Time>2014-02-24T18:27:23.7525538+07:00</Time>
     </Item>
     <Item>
-      <Source>menu\bintang.png</Source>
-      <Name>menu\bintang</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
+      <Source>particles\Demo1.xml</Source>
+      <Name>particles\Demo1</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\icup\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\menu\bintang.xnb</Output>
-      <Time>2014-02-24T18:27:23.7939311+07:00</Time>
-    </Item>
-    <Item>
-      <Source>menu\scorebutton.png</Source>
-      <Name>menu\scorebutton</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>D:\icup\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\menu\scorebutton.xnb</Output>
-      <Time>2014-02-24T18:27:23.8009316+07:00</Time>
-    </Item>
-    <Item>
-      <Source>menu\settingbutton.png</Source>
-      <Name>menu\settingbutton</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>D:\icup\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\menu\settingbutton.xnb</Output>
-      <Time>2014-02-24T18:27:23.8029332+07:00</Time>
-    </Item>
-    <Item>
-      <Source>menu\star.png</Source>
-      <Name>menu\star</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>D:\icup\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\menu\star.xnb</Output>
-      <Time>2014-02-24T18:27:23.8049284+07:00</Time>
+      <Output>D:\icup\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\particles\Demo1.xnb</Output>
+      <Time>2014-02-27T09:25:37.8465214+07:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -214,6 +250,10 @@
       <OutputDirectory>D:\icup\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
+      <Assembly>
+        <Key>D:\icup\Mercury.4.0_WindowsPhone\ProjectMercury.ContentPipeline.dll</Key>
+        <Value>2012-04-27T20:51:02+07:00</Value>
+      </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
         <Value>2011-09-01T16:22:30+07:00</Value>

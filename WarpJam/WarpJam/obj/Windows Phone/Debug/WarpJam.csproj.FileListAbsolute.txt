@@ -112,9 +112,9 @@ D:\icup\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\menu\bintang.xnb
 D:\icup\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\menu\scorebutton.xnb
 D:\icup\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\menu\settingbutton.xnb
 D:\icup\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\menu\star.xnb
-D:\icup\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\WarpJam.xap
-D:\icup\WarpJam\WarpJam\WarpJam\obj\Windows Phone\Debug\XapCacheFile.xml
-D:\icup\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\AppManifest.xaml
-D:\icup\WarpJam\WarpJam\WarpJam\obj\Windows Phone\Debug\WMAppManifest.xml.g
-D:\icup\WarpJam\WarpJam\WarpJam\obj\Windows Phone\Debug\WMAppManifest.xml
-bin\Windows Phone\Debug\
+D:\icup\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\pilih level\bg2000.xnb
+D:\icup\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\pilih level\portal dummy.xnb
+D:\icup\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\particles\Star.xnb
+D:\icup\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\Content\particles\Demo1.xnb
+D:\icup\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\ProjectMercury.dll
+D:\icup\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Debug\ProjectMercury.pdb

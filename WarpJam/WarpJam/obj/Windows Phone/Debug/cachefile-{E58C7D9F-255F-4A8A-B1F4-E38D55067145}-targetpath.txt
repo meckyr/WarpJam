@@ -8,17 +8,21 @@ Content\menu\playbutton.xnb
 Content\menu\hero.xnb
 Content\WhitePixel.xnb
 Content\level\invisbutton.xnb
+Content\menu\settingbutton.xnb
+Content\menu\scorebutton.xnb
 Content\menu\background.xnb
+Content\menu\star.xnb
+Content\level\pesawat.xnb
 Content\level\background1.xnb
 Content\level\background2.xnb
+Content\menu\bintang.xnb
 Content\level\gr8.xnb
 Content\level\leet.xnb
 Content\level\meh.xnb
-Content\level\pesawat.xnb
-Content\level\shield.xnb
 Content\level\sux.xnb
+Content\level\shield.xnb
+Content\pilih level\bg2000.xnb
+Content\pilih level\portal dummy.xnb
+Content\particles\Star.xnb
 Content\font\font.xnb
-Content\menu\bintang.xnb
-Content\menu\scorebutton.xnb
-Content\menu\settingbutton.xnb
-Content\menu\star.xnb
+Content\particles\Demo1.xnb

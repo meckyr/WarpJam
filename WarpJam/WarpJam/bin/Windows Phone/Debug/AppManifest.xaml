@@ -2,5 +2,6 @@
   <Deployment.Parts>
     <AssemblyPart x:Name="WarpJam" Source="WarpJam.dll" />
     <AssemblyPart x:Name="FarseerPhysics WP7" Source="FarseerPhysics WP7.dll" />
+    <AssemblyPart x:Name="ProjectMercury" Source="ProjectMercury.dll" />
   </Deployment.Parts>
 </Deployment>
