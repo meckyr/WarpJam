@@ -13,6 +13,7 @@ namespace WarpJam.Tools
         public List<GameObject2D> SceneObjects2D { get; private set; }
         public List<GameObject2D> HUDObjects2D { get; private set; }
         public List<ObjectWithParticle> objectsWithParticle { get; set; }
+        public BackgroundParticle bg_particle;
 
         public GameScene(string scenename)
         {
@@ -90,6 +91,11 @@ namespace WarpJam.Tools
         public virtual void DrawParticle(RenderContext rendercontext)
         {
             objectsWithParticle.ForEach(objectwithparticle => objectwithparticle.DrawParticle(rendercontext));
+        }
+
+        public virtual void DrawBGParticle(RenderContext rendercontext)
+        {
+            bg_particle.DrawParticle(rendercontext);
         }
 
         public virtual void LoadContent(ContentManager contentmanager)

@@ -32,9 +32,14 @@ namespace WarpJam
         private Color lineColor = Color.Purple;
         private bool isFinished = false;
 
+        #region particles
+        
+        #endregion
+
         public MainLevel()
             : base("MainLevel")
         {
+            
         }
 
         public override void Initialize()
@@ -73,6 +78,8 @@ namespace WarpJam
             pesawat = new Pesawat();
             AddSceneObject(pesawat);
 
+            bg_particle = new BackgroundParticle();
+
             MediaPlayer.MediaStateChanged += new EventHandler<EventArgs>(MediaPlayer_MediaStateChanged);
 
             base.Initialize();
@@ -98,22 +105,27 @@ namespace WarpJam
             Obstacle obstacle1 = new Obstacle(new Vector2(2425, 400), TimeSpan.FromSeconds(6.6));
             obstacle.Add(obstacle1);
             AddSceneObject(obstacle1);
+            AddObjectWithParticle(obstacle1);
 
             Obstacle obstacle2 = new Obstacle(new Vector2(2600, 400), TimeSpan.FromSeconds(10));
             obstacle.Add(obstacle2);
             AddSceneObject(obstacle2);
+            AddObjectWithParticle(obstacle2);
 
             Obstacle obstacle3 = new Obstacle(new Vector2(3000, 400), TimeSpan.FromSeconds(14));
             obstacle.Add(obstacle3);
             AddSceneObject(obstacle3);
+            AddObjectWithParticle(obstacle3);
 
             Obstacle obstacle4 = new Obstacle(new Vector2(4000, 400), TimeSpan.FromSeconds(15));
             obstacle.Add(obstacle4);
             AddSceneObject(obstacle4);
+            AddObjectWithParticle(obstacle4);
 
             Obstacle obstacle5 = new Obstacle(new Vector2(6000, 400), TimeSpan.FromSeconds(18));
             obstacle.Add(obstacle5);
             AddSceneObject(obstacle5);
+            AddObjectWithParticle(obstacle5);
         }
 
         public void SpawnScore(int i)
@@ -175,6 +187,12 @@ namespace WarpJam
             base.LoadContent(contentmanager);
         }
 
+        public override void LoadParticle(ContentManager contentmanager, ProjectMercury.Renderers.SpriteBatchRenderer particleRenderer)
+        {
+            base.LoadParticle(contentmanager, particleRenderer);
+            bg_particle.LoadParticle(contentmanager, particleRenderer);
+        }
+
         void MediaPlayer_MediaStateChanged(object sender, EventArgs e)
         {
             if (isFinished)
@@ -190,6 +208,10 @@ namespace WarpJam
 
         public override void Update(RenderContext rendercontext, ContentManager contentmanager)
         {
+            //particle bg
+            bg_particle.Update(rendercontext);
+            //end particle bg
+
             if (delay > 0)
                 delay -= rendercontext.GameTime.ElapsedGameTime.TotalSeconds;
 

@@ -77,7 +77,6 @@ namespace WarpJam
             SceneManager.AddGameScene(new TitleScreen());
             SceneManager.AddGameScene(new MainMenu());
             SceneManager.AddGameScene(new MainLevel());
-            SceneManager.AddGameScene(new PilihLevel());
 
             // Set Scene pertama
             SceneManager.SetActiveScene("TitleScreen");
