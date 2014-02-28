@@ -35,7 +35,8 @@ namespace WarpJam
         public override void Initialize()
         {
             particles = new List<ParticleEffect>();
-explosion = new GameAnimatedSprite("level\\obstacledestroyed", 4, 80, new Point(80, 80));
+
+            explosion = new GameAnimatedSprite("level\\obstacledestroyed", 4, 80, new Point(80, 80));
             explosion.Origin = new Vector2(40, 40);
             explosion.Translate(position);
             explosion.CanDraw = false;

@@ -42,7 +42,7 @@ namespace WarpJam
 
             portal = new Portal("pilih level\\portal dummy", 1, 5, new Point(200,200), 1);
             AddSceneObject(portal);
-            AddObjectWithParticle(portal);
+            // AddObjectWithParticle(portal);
             portal.Translate(200, 200);
 
             //CameraManager.getInstance().camera.Focus = portal;

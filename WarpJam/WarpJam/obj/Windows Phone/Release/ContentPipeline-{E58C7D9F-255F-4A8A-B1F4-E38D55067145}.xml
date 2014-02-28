@@ -1,0 +1,496 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>song\levelmusic.mp3</Source>
+      <Name>song\levelmusic</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Release\Content\song\levelmusic.xnb</Output>
+      <Extra>E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Release\Content\song\levelmusic.wma</Extra>
+      <Time>2014-02-23T19:53:50.506415+07:00</Time>
+    </Item>
+    <Item>
+      <Source>sfx\button.mp3</Source>
+      <Name>sfx\button</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Release\Content\sfx\button.xnb</Output>
+      <Time>2014-02-25T18:58:32.4819561+07:00</Time>
+    </Item>
+    <Item>
+      <Source>song\mainmusic.mp3</Source>
+      <Name>song\mainmusic</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Release\Content\song\mainmusic.xnb</Output>
+      <Extra>E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Release\Content\song\mainmusic.wma</Extra>
+      <Time>2014-02-15T21:09:49.078447+07:00</Time>
+    </Item>
+    <Item>
+      <Source>song\levelmusic2.mp3</Source>
+      <Name>song\levelmusic2</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Release\Content\song\levelmusic2.xnb</Output>
+      <Extra>E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Release\Content\song\levelmusic2.wma</Extra>
+      <Time>2014-02-25T20:05:52.7693968+07:00</Time>
+    </Item>
+    <Item>
+      <Source>song\mainmusic2.mp3</Source>
+      <Name>song\mainmusic2</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Release\Content\song\mainmusic2.xnb</Output>
+      <Extra>E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Release\Content\song\mainmusic2.wma</Extra>
+      <Time>2014-02-25T17:13:03.6207798+07:00</Time>
+    </Item>
+    <Item>
+      <Source>sfx\whoosh.mp3</Source>
+      <Name>sfx\whoosh</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Release\Content\sfx\whoosh.xnb</Output>
+      <Time>2014-02-25T18:58:30.7057283+07:00</Time>
+    </Item>
+    <Item>
+      <Source>sfx\pulse.mp3</Source>
+      <Name>sfx\pulse</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Release\Content\sfx\pulse.xnb</Output>
+      <Time>2014-02-26T18:18:44.3092492+07:00</Time>
+    </Item>
+    <Item>
+      <Source>sfx\pulse2.mp3</Source>
+      <Name>sfx\pulse2</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Release\Content\sfx\pulse2.xnb</Output>
+      <Time>2014-02-26T18:18:44.3092492+07:00</Time>
+    </Item>
+    <Item>
+      <Source>sfx\sux.mp3</Source>
+      <Name>sfx\sux</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Release\Content\sfx\sux.xnb</Output>
+      <Time>2014-02-26T18:32:50.3557093+07:00</Time>
+    </Item>
+    <Item>
+      <Source>font\font.spritefont</Source>
+      <Name>font\font</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Release\Content\font\font.xnb</Output>
+      <Time>2014-02-22T16:52:48.3106696+07:00</Time>
+    </Item>
+    <Item>
+      <Source>menu\hero.png</Source>
+      <Name>menu\hero</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Release\Content\menu\hero.xnb</Output>
+      <Time>2014-02-15T16:46:15.0850975+07:00</Time>
+    </Item>
+    <Item>
+      <Source>WhitePixel.bmp</Source>
+      <Name>WhitePixel</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Release\Content\WhitePixel.xnb</Output>
+      <Time>2014-02-15T16:46:15.077096+07:00</Time>
+    </Item>
+    <Item>
+      <Source>level\invisbutton.jpg</Source>
+      <Name>level\invisbutton</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Release\Content\level\invisbutton.xnb</Output>
+      <Time>2014-02-24T21:17:15.9774936+07:00</Time>
+    </Item>
+    <Item>
+      <Source>menu\settingbutton.png</Source>
+      <Name>menu\settingbutton</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Release\Content\menu\settingbutton.xnb</Output>
+      <Time>2014-02-25T17:53:40.0173365+07:00</Time>
+    </Item>
+    <Item>
+      <Source>menu\scorebutton.png</Source>
+      <Name>menu\scorebutton</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Release\Content\menu\scorebutton.xnb</Output>
+      <Time>2014-02-25T17:55:14.8383853+07:00</Time>
+    </Item>
+    <Item>
+      <Source>menu\background.jpg</Source>
+      <Name>menu\background</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Release\Content\menu\background.xnb</Output>
+      <Time>2014-02-27T15:19:02.2099017+07:00</Time>
+    </Item>
+    <Item>
+      <Source>menu\star.png</Source>
+      <Name>menu\star</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Release\Content\menu\star.xnb</Output>
+      <Time>2014-02-21T18:12:44.465168+07:00</Time>
+    </Item>
+    <Item>
+      <Source>level\pesawat.png</Source>
+      <Name>level\pesawat</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Release\Content\level\pesawat.xnb</Output>
+      <Time>2014-02-22T16:03:34.7461049+07:00</Time>
+    </Item>
+    <Item>
+      <Source>level\background1.jpg</Source>
+      <Name>level\background1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Release\Content\level\background1.xnb</Output>
+      <Time>2014-02-27T16:47:59.2058579+07:00</Time>
+    </Item>
+    <Item>
+      <Source>level\background2.jpg</Source>
+      <Name>level\background2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Release\Content\level\background2.xnb</Output>
+      <Time>2014-02-27T16:47:59.8999454+07:00</Time>
+    </Item>
+    <Item>
+      <Source>menu\bintang.png</Source>
+      <Name>menu\bintang</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Release\Content\menu\bintang.xnb</Output>
+      <Time>2014-02-22T16:33:49.9509298+07:00</Time>
+    </Item>
+    <Item>
+      <Source>level\gr8.png</Source>
+      <Name>level\gr8</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Release\Content\level\gr8.xnb</Output>
+      <Time>2014-02-23T17:59:25.8316999+07:00</Time>
+    </Item>
+    <Item>
+      <Source>level\leet.png</Source>
+      <Name>level\leet</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Release\Content\level\leet.xnb</Output>
+      <Time>2014-02-23T17:59:25.8577459+07:00</Time>
+    </Item>
+    <Item>
+      <Source>level\meh.png</Source>
+      <Name>level\meh</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Release\Content\level\meh.xnb</Output>
+      <Time>2014-02-23T17:59:25.8587188+07:00</Time>
+    </Item>
+    <Item>
+      <Source>level\sux.png</Source>
+      <Name>level\sux</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Release\Content\level\sux.xnb</Output>
+      <Time>2014-02-23T17:59:25.8587188+07:00</Time>
+    </Item>
+    <Item>
+      <Source>level\shield.png</Source>
+      <Name>level\shield</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Release\Content\level\shield.xnb</Output>
+      <Time>2014-02-24T17:19:37.5480872+07:00</Time>
+    </Item>
+    <Item>
+      <Source>level\exhaustmiddle.png</Source>
+      <Name>level\exhaustmiddle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Release\Content\level\exhaustmiddle.xnb</Output>
+      <Time>2014-02-25T12:23:54.4601857+07:00</Time>
+    </Item>
+    <Item>
+      <Source>level\exhaustbottom.png</Source>
+      <Name>level\exhaustbottom</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Release\Content\level\exhaustbottom.xnb</Output>
+      <Time>2014-02-25T12:23:54.459185+07:00</Time>
+    </Item>
+    <Item>
+      <Source>level\exhausttop.png</Source>
+      <Name>level\exhausttop</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Release\Content\level\exhausttop.xnb</Output>
+      <Time>2014-02-25T12:23:54.4601857+07:00</Time>
+    </Item>
+    <Item>
+      <Source>title\logo.png</Source>
+      <Name>title\logo</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Release\Content\title\logo.xnb</Output>
+      <Time>2014-02-25T14:27:35.4507057+07:00</Time>
+    </Item>
+    <Item>
+      <Source>title\text.png</Source>
+      <Name>title\text</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Release\Content\title\text.xnb</Output>
+      <Time>2014-02-25T14:59:08.043304+07:00</Time>
+    </Item>
+    <Item>
+      <Source>menu\settingbuttonanimated.png</Source>
+      <Name>menu\settingbuttonanimated</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Release\Content\menu\settingbuttonanimated.xnb</Output>
+      <Time>2014-02-25T18:04:12.1663155+07:00</Time>
+    </Item>
+    <Item>
+      <Source>menu\scorebuttonanimated.png</Source>
+      <Name>menu\scorebuttonanimated</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Release\Content\menu\scorebuttonanimated.xnb</Output>
+      <Time>2014-02-27T09:02:20.4669472+07:00</Time>
+    </Item>
+    <Item>
+      <Source>menu\playbutton.png</Source>
+      <Name>menu\playbutton</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Release\Content\menu\playbutton.xnb</Output>
+      <Time>2014-02-27T09:15:56.1348138+07:00</Time>
+    </Item>
+    <Item>
+      <Source>menu\playbuttonanimated.png</Source>
+      <Name>menu\playbuttonanimated</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Release\Content\menu\playbuttonanimated.xnb</Output>
+      <Time>2014-02-27T09:22:13.7234609+07:00</Time>
+    </Item>
+    <Item>
+      <Source>title\background.png</Source>
+      <Name>title\background</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Release\Content\title\background.xnb</Output>
+      <Time>2014-02-27T09:28:25.4466738+07:00</Time>
+    </Item>
+    <Item>
+      <Source>menu\ship2.png</Source>
+      <Name>menu\ship2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Release\Content\menu\ship2.xnb</Output>
+      <Time>2014-02-27T09:45:52.7565701+07:00</Time>
+    </Item>
+    <Item>
+      <Source>menu\ship1.png</Source>
+      <Name>menu\ship1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Release\Content\menu\ship1.xnb</Output>
+      <Time>2014-02-27T09:45:56.4200291+07:00</Time>
+    </Item>
+    <Item>
+      <Source>pilih level\bg2000.jpg</Source>
+      <Name>pilih level\bg2000</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Release\Content\pilih level\bg2000.xnb</Output>
+      <Time>2014-02-27T17:14:59.4530469+07:00</Time>
+    </Item>
+    <Item>
+      <Source>pilih level\portal dummy.png</Source>
+      <Name>pilih level\portal dummy</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Release\Content\pilih level\portal dummy.xnb</Output>
+      <Time>2014-02-27T16:57:54.2922975+07:00</Time>
+    </Item>
+    <Item>
+      <Source>particles\Star.png</Source>
+      <Name>particles\Star</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Release\Content\particles\Star.xnb</Output>
+      <Time>2014-02-27T16:57:54.2163182+07:00</Time>
+    </Item>
+    <Item>
+      <Source>level\obstacledestroyed.png</Source>
+      <Name>level\obstacledestroyed</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Release\Content\level\obstacledestroyed.xnb</Output>
+      <Time>2014-02-27T18:59:58.1527919+07:00</Time>
+    </Item>
+    <Item>
+      <Source>level\obstacle.png</Source>
+      <Name>level\obstacle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Release\Content\level\obstacle.xnb</Output>
+      <Time>2014-02-27T19:02:02.4597021+07:00</Time>
+    </Item>
+    <Item>
+      <Source>particles\Beam.png</Source>
+      <Name>particles\Beam</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Release\Content\particles\Beam.xnb</Output>
+      <Time>2014-02-27T19:48:34.7471821+07:00</Time>
+    </Item>
+    <Item>
+      <Source>particles\BeamBlurred.png</Source>
+      <Name>particles\BeamBlurred</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Release\Content\particles\BeamBlurred.xnb</Output>
+      <Time>2014-02-27T19:48:34.765142+07:00</Time>
+    </Item>
+    <Item>
+      <Source>particles\LensFlare.png</Source>
+      <Name>particles\LensFlare</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Release\Content\particles\LensFlare.xnb</Output>
+      <Time>2014-02-27T19:48:34.7801417+07:00</Time>
+    </Item>
+    <Item>
+      <Source>particles\Demo1.xml</Source>
+      <Name>particles\Demo1</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Release\Content\particles\Demo1.xnb</Output>
+      <Time>2014-02-27T16:57:54.2013155+07:00</Time>
+    </Item>
+    <Item>
+      <Source>particles\meledak.xml</Source>
+      <Name>particles\meledak</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Release\Content\particles\meledak.xnb</Output>
+      <Time>2014-02-27T19:48:34.7801417+07:00</Time>
+    </Item>
+    <Item>
+      <Source>particles\warp.xml</Source>
+      <Name>particles\warp</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Release\Content\particles\warp.xnb</Output>
+      <Time>2014-02-27T19:48:34.7811411+07:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <ContentProjectGUID>{E58C7D9F-255F-4A8A-B1F4-E38D55067145}</ContentProjectGUID>
+      <TargetPlatform>WindowsPhone</TargetPlatform>
+      <TargetProfile>Reach</TargetProfile>
+      <BuildConfiguration>Release</BuildConfiguration>
+      <CompressContent>false</CompressContent>
+      <RootDirectory>E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJamContent\</RootDirectory>
+      <LoggerRootDirectory>E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\</LoggerRootDirectory>
+      <IntermediateDirectory>E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\obj\Windows Phone\Release\</IntermediateDirectory>
+      <OutputDirectory>E:\Project\Git\WarpJam\WarpJam\WarpJam\WarpJam\bin\Windows Phone\Release\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>E:\Project\Git\WarpJam\WarpJam\Mercury.4.0_WindowsPhone\ProjectMercury.ContentPipeline.dll</Key>
+        <Value>2012-04-27T20:51:02+07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2012-09-06T14:52:54+07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2012-09-06T14:52:54+07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2012-09-06T14:52:54+07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2012-09-06T14:52:54+07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2012-09-06T14:52:54+07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2012-09-06T14:52:54+07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2013-04-12T03:49:17.1274678+07:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>

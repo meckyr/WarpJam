@@ -74,13 +74,14 @@ namespace WarpJam
             SceneManager.RenderContext.GraphicsDevice = graphics.GraphicsDevice;
 
             // Add semua scene yang ada
+            SceneManager.AddGameScene(new SplashScreen());
             SceneManager.AddGameScene(new TitleScreen());
             SceneManager.AddGameScene(new MainMenu());
             SceneManager.AddGameScene(new MainLevel());
             //SceneManager.AddGameScene(new PilihLevel());
 
             // Set Scene pertama
-            SceneManager.SetActiveScene("TitleScreen");
+            SceneManager.SetActiveScene("SplashScreen");
             SceneManager.Initialize();
 
             base.Initialize();

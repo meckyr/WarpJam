@@ -56,11 +56,11 @@ namespace WarpJam
 
         public override void Update(RenderContext renderContext)
         {
-            var position = new Vector3(400, 240, 0);
+            var position = new Vector3(800, 240, 0);
             foreach (ParticleEffect particleEffect in particles)
             {
                 particleEffect.Trigger(ref position);
-                particleEffect.Update((float)SceneManager.gameTime.ElapsedGameTime.TotalSeconds);
+                particleEffect.Update((float)SceneManager.gameTime.ElapsedGameTime.TotalSeconds/2.5f);
             }
             base.Update(renderContext);
         }

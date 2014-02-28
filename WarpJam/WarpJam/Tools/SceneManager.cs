@@ -27,6 +27,7 @@ namespace WarpJam.Tools
         public static SoundEffect pulse { get; private set; }
         public static SoundEffect pulse2 { get; private set; }
         public static SoundEffect sux { get; private set; }
+        public static SoundEffect ignition { get; private set; }
         
         // kumpulan music
         public static Song mainmusic;
@@ -138,12 +139,10 @@ namespace WarpJam.Tools
             pulse = contentmanager.Load<SoundEffect>("sfx\\pulse");
             pulse2 = contentmanager.Load<SoundEffect>("sfx\\pulse2");
             sux = contentmanager.Load<SoundEffect>("sfx\\sux");
+            ignition = contentmanager.Load<SoundEffect>("sfx\\ignition");
 
             mainmusic = contentmanager.Load<Song>("song\\mainmusic2");
             levelmusic = contentmanager.Load<Song>("song\\levelmusic2");
-
-            // mainkan musik
-            PlaySong(1);
 
             GameScenes.ForEach(scene => scene.LoadContent(contentmanager));
             GameScenes.ForEach(scene => scene.LoadParticle(contentmanager, RenderContext.particleRenderer));

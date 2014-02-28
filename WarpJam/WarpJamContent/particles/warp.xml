@@ -18,7 +18,7 @@
           <Blue>[1,1]</Blue>
         </ReleaseColour>
         <ReleaseOpacity>[1,1]</ReleaseOpacity>
-        <ReleaseScale>[256,0]</ReleaseScale>
+        <ReleaseScale>[256,256]</ReleaseScale>
         <ReleaseRotation>
           <Pitch>[0,0]</Pitch>
           <Yaw>[0,0]</Yaw>
@@ -26,25 +26,25 @@
         </ReleaseRotation>
         <ParticleTextureAssetPath>Beam</ParticleTextureAssetPath>
         <BlendMode>Add</BlendMode>
-        <Width>800</Width>
-        <Height>320</Height>
+        <Width>1200</Width>
+        <Height>600</Height>
         <Depth>50</Depth>
         <Rotation>0 0 0</Rotation>
         <Modifiers>
           <Modifier Type="ProjectMercury.Modifiers.OpacityInterpolator3">
-            <InitialOpacity>0</InitialOpacity>
+            <InitialOpacity>0.6</InitialOpacity>
             <Median>0.5</Median>
             <MedianOpacity>0.1</MedianOpacity>
-            <FinalOpacity>0</FinalOpacity>
+            <FinalOpacity>0.6</FinalOpacity>
           </Modifier>
           <Modifier Type="ProjectMercury.Modifiers.LinearGravityModifier">
             <GravityVector>-1 0 0</GravityVector>
-            <Strength>750</Strength>
+            <Strength>5000</Strength>
           </Modifier>
         </Modifiers>
         <Controllers>
           <Controller Type="ProjectMercury.Controllers.CooldownController">
-            <CooldownPeriod>0.05</CooldownPeriod>
+            <CooldownPeriod>0.1</CooldownPeriod>
           </Controller>
         </Controllers>
       </Item>
@@ -70,24 +70,24 @@
         <ParticleTextureAssetPath>BeamBlurred</ParticleTextureAssetPath>
         <BlendMode>Alpha</BlendMode>
         <Width>800</Width>
-        <Height>320</Height>
+        <Height>700</Height>
         <Depth>120</Depth>
         <Rotation>0 0 0</Rotation>
         <Modifiers>
           <Modifier Type="ProjectMercury.Modifiers.OpacityInterpolator3">
-            <InitialOpacity>0</InitialOpacity>
+            <InitialOpacity>0.25</InitialOpacity>
             <Median>0.5</Median>
             <MedianOpacity>0.3</MedianOpacity>
-            <FinalOpacity>0</FinalOpacity>
+            <FinalOpacity>0.25</FinalOpacity>
           </Modifier>
           <Modifier Type="ProjectMercury.Modifiers.LinearGravityModifier">
             <GravityVector>-1 0 0</GravityVector>
-            <Strength>500</Strength>
+            <Strength>5000</Strength>
           </Modifier>
         </Modifiers>
         <Controllers>
           <Controller Type="ProjectMercury.Controllers.CooldownController">
-            <CooldownPeriod>0.25</CooldownPeriod>
+            <CooldownPeriod>0.1</CooldownPeriod>
           </Controller>
         </Controllers>
       </Item>
